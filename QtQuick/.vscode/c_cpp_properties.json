@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/caglar/Development/Qt/CMakeTest/TestInVSCode/build", 
+                "/home/caglar/Development/Qt/CMakeTest/TestInVSCode",
+                "/home/caglar/Development/Qt/CMakeTest/TestInVSCode/build/TestInVSCode_autogen/include",
+                "/opt/Qt/5.12.1/gcc_64/include",
+                "/opt/Qt/5.12.1/gcc_64/include/QtCore",
+                "/opt/Qt/5.12.1/gcc_64/./mkspecs/linux-g++",
+                "/opt/Qt/5.12.1/gcc_64/include/QtQuick",
+                "/opt/Qt/5.12.1/gcc_64/include/QtQml",
+                "/opt/Qt/5.12.1/gcc_64/include/QtNetwork",
+                "/opt/Qt/5.12.1/gcc_64/include/QtGui",
+                "/opt/Qt/5.12.1/gcc_64/include/QtQuickControls2"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
