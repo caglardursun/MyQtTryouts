@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/root/images">
+        <file>images/iconSpritesheet24.svg</file>
+    </qresource>
+</RCC>
