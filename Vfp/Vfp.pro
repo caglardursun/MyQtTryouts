@@ -23,23 +23,31 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 CONFIG += c++11
-
+QMAKE_CXXFLAGS = -std=c++11
 SOURCES += \
         main.cpp \
-    View/setuptab.cpp
+    View/setuptab.cpp \
+    startup.cpp \
+    utils.cpp
+
+
 SOURCES += \        
         View/mainview.cpp \        
 
 HEADERS += \
         View/mainview.h \
-    View/setuptab.h
+    View/setuptab.h \
+    startup.h \
+    utils.h
+
+
 
 
 FORMS += \
         View/mainview.ui \
     View/setuptab.ui
 
-QMAKE_CXXFLAGS = -std=c++11
+
 
 
 # Default rules for deployment.

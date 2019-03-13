@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="../vfpresources.qrc">
-    <normaloff>:/root/images/images/iconSpritesheet24.svg</normaloff>:/root/images/images/iconSpritesheet24.svg</iconset>
+    <normaloff>:/images/ApplicationIcon.png</normaloff>:/images/ApplicationIcon.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">

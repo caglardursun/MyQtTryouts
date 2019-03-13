@@ -1,5 +1,6 @@
 <RCC>
-    <qresource prefix="/root/images">
-        <file>images/iconSpritesheet24.svg</file>
+    <qresource prefix="/root/images"/>
+    <qresource prefix="/">
+        <file>images/ApplicationIcon.png</file>
     </qresource>
 </RCC>

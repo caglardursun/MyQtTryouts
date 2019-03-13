@@ -7,16 +7,20 @@ namespace Ui {
 class SetupTab;
 }
 
-class SetupTab : public QWidget
-{
-    Q_OBJECT
+namespace Ps {
 
-public:
-    explicit SetupTab(QWidget *parent = nullptr);
-    ~SetupTab();
+    class SetupTab : public QWidget
+    {
+        Q_OBJECT
 
-private:
-    Ui::SetupTab *ui;
-};
+    public:
+        explicit SetupTab(QWidget *parent = nullptr);
+        ~SetupTab();
+
+    private:
+        Ui::SetupTab *ui;
+    };
+
+}
 
 #endif // SETUPTAB_H
