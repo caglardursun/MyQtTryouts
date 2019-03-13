@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "compileCommands": "${workspaceFolder}/.vscode/compile_commands.json",
+            "includePath": [
+                "${workspaceFolder}/**",                
+                "/home/caglar/Development/Qt/QtTranslation/QtTranslationWithCmake/build",
+                "/home/caglar/Development/Qt/QtTranslation/QtTranslationWithCmake",
+                "/home/caglar/Development/Qt/QtTranslation/QtTranslationWithCmake/build/tFirstConsole_autogen/include",
+                "/opt/Qt/5.12.1/gcc_64/include",
+                "/opt/Qt/5.12.1/gcc_64/include/QtCore",
+                "/opt/Qt/5.12.1/gcc_64/./mkspecs/linux-g+"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "configurationProvider": "vector-of-bool.cmake-tools"
+        }
+    ],
+    "version": 4
+}
