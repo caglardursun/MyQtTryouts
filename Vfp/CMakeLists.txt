@@ -13,15 +13,21 @@ add_subdirectory(View)
 add_subdirectory(Model)
 add_subdirectory(ViewMng) 
 
+set(COMPANY "AIT Ltd Şti")
+set(RESOURCE_FILES vfpresources.qrc)
 
 
 # files ...
 set(project_sources 
     "main.cpp" 
-    "mainwindow.cpp")
+    "startup.cpp"
+    "utils.cpp"
+    "View/mainview.cpp"
+    "View/setuptab.cpp"
+    )
 
-set(project_headers "mainwindow.h")
-set(project_dialogs "mainwindow.ui")
+set(project_headers "startup.h" "utils.h" "View/mainview.h" "View/setuptab.h")
+set(project_dialogs "View/mainview.ui" "View/setuptab.ui")
 # end of files files ...
 
 #ui file compiled to ui_{ui_filename}.h so ...
