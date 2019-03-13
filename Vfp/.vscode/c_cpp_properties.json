@@ -24,6 +24,31 @@
             "cppStandard": "c++17",
             "intelliSenseMode": "msvc-x64",
             "configurationProvider": "vector-of-bool.cmake-tools"
+        },{
+            "name": "Linux_x64",
+            "includePath": [
+                "${workspaceFolder}/**",                
+                "/home/caglar/Development/Qt/MyQtTryouts/Vfp/build",
+                "/home/caglar/Development/Qt/MyQtTryouts/Vfp",
+                "/home/caglar/Development/Qt/MyQtTryouts/Vfp/build/Vfp_autogen/include",
+                "/opt/Qt/5.12.1/gcc_64/include",
+                "/opt/Qt/5.12.1/gcc_64/include/QtCore",
+                "/opt/Qt/5.12.1/gcc_64/./mkspecs/linux-g++",
+                "/opt/Qt/5.12.1/gcc_64/include/QtWidgets",
+                "/opt/Qt/5.12.1/gcc_64/include/QtGui",
+                "/opt/Qt/5.12.1/gcc_64/include/QtNetwor"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.17763.0",
+            "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2017/Enterprise/VC/Tools/MSVC/14.16.27023/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64",
+            "configurationProvider": "vector-of-bool.cmake-tools"
         }
     ],
     "version": 4

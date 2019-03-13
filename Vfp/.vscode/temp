@@ -1,8 +1,9 @@
-"Vfp_autogen\\include",
-"C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include",
-"C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtCore",
-"C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\.\\mkspecs\\win32-msvc",
-"C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtWidgets",
-"C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtGui",
-"C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtANGLE",
-"C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtNetwork"
+"/home/caglar/Development/Qt/MyQtTryouts/Vfp/build",
+"/home/caglar/Development/Qt/MyQtTryouts/Vfp",
+"/home/caglar/Development/Qt/MyQtTryouts/Vfp/build/Vfp_autogen/include",
+"/opt/Qt/5.12.1/gcc_64/include",
+"/opt/Qt/5.12.1/gcc_64/include/QtCore",
+"/opt/Qt/5.12.1/gcc_64/./mkspecs/linux-g++",
+"/opt/Qt/5.12.1/gcc_64/include/QtWidgets",
+"/opt/Qt/5.12.1/gcc_64/include/QtGui",
+"/opt/Qt/5.12.1/gcc_64/include/QtNetwor"
