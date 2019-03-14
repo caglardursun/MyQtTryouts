@@ -5,7 +5,7 @@ project(Vfp VERSION 0.1 LANGUAGES CXX)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
-set(AUTORCC ON)
+set(CMAKE_AUTORCC ON)
 
 find_package(Qt5 REQUIRED Core Widgets Gui Network LinguistTools)
 
@@ -38,7 +38,7 @@ set(project_headers
     "View/mainview.h" 
     "View/setuptab.h" 
     "Model/settings.h")
-    
+
 set(project_dialogs "View/mainview.ui" "View/setuptab.ui")
 # end of files files ...
 
@@ -59,3 +59,4 @@ add_executable(${PROJECT_NAME}
                 ${QM_FILES})
 
 target_link_libraries(${PROJECT_NAME} PUBLIC Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Network)
+
