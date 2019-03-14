@@ -4,17 +4,22 @@ project(Vfp VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(AUTORCC ON)
 
 find_package(Qt5 REQUIRED Core Widgets Gui Network LinguistTools)
 
-add_compile_options(-std=c++11)
+#add_compile_options(-std=c++11)
 
-add_subdirectory(View)
-add_subdirectory(Model)
-add_subdirectory(ViewMng) 
+#add_subdirectory(View)
+#add_subdirectory(Model)
+#add_subdirectory(ViewMng) 
 
 set(COMPANY "AIT Ltd Şti")
-set(RESOURCE_FILES vfpresources.qrc)
+
+
+set(resource_files 
+    "vfpresources.qrc")
 
 
 # files ...
@@ -24,9 +29,16 @@ set(project_sources
     "utils.cpp"
     "View/mainview.cpp"
     "View/setuptab.cpp"
+    "Model/settings.cpp"
     )
 
-set(project_headers "startup.h" "utils.h" "View/mainview.h" "View/setuptab.h")
+set(project_headers 
+    "startup.h" 
+    "utils.h" 
+    "View/mainview.h" 
+    "View/setuptab.h" 
+    "Model/settings.h")
+    
 set(project_dialogs "View/mainview.ui" "View/setuptab.ui")
 # end of files files ...
 
@@ -36,12 +48,14 @@ qt5_wrap_ui(project_header_wrap ${project_dialogs})
 qt5_wrap_cpp(project_source_moc ${project_headers})
 #end of wrapping ...
 
+
 add_executable(${PROJECT_NAME} 
                 ${project_sources} 
                 ${project_headers} 
                 ${project_dialogs} 
                 ${project_header_wrap}
-                ${project_source_moc}
+                ${project_source_moc}  
+                ${resource_files}              
                 ${QM_FILES})
 
 target_link_libraries(${PROJECT_NAME} PUBLIC Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Network)

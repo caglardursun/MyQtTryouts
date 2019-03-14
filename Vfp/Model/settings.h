@@ -3,7 +3,6 @@
 #include <QWidget>
 
 
-
 class QString;
 class QStringListModel;
 class QJsonParseError;
@@ -22,6 +21,7 @@ namespace Ps{
     private:
         QString m_fileName;
         QString ReadJsonFile();
+        QString ReadFromInternalResource();
         explicit Settings(const Settings& rhs) = delete;
         Settings& operator = (const Settings& rhs) = delete;
     };

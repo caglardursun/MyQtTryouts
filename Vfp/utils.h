@@ -9,7 +9,7 @@ namespace Ps {
         Utils();
         static void DestructorMsg(QString value);
         static void DestructorMsg(QObject *value);
-
+        static void Msg(QString value);
     private:
     };
 }

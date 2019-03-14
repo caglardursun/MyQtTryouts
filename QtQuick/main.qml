@@ -19,13 +19,27 @@ ApplicationWindow {
         id: element
         x: 170
         y: 85
-        width: 317        
-        height: 73                
+        width: 317
+        height: 73
         color: "#D16806"
         text: qsTr("Hello There !")
         verticalAlignment: Text.AlignVCenter
         horizontalAlignment: Text.AlignHCenter
         font.pixelSize: 12
     }
-    
+
+    Button {
+        id: button
+        x: 43
+        y: 220
+        text: qsTr("Testing ...")
+    }
+
+    Button {
+        id: button1
+        x: 504
+        y: 220
+        text: qsTr("Holly Crap")
+    }
+
 }

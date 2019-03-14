@@ -3,4 +3,7 @@
     <qresource prefix="/">
         <file>images/ApplicationIcon.png</file>
     </qresource>
+    <qresource prefix="/json">
+        <file>settings.json</file>
+    </qresource>
 </RCC>

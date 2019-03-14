@@ -2,7 +2,7 @@
     "configurations": [
         {
             "name": "Linux",
-            "compileCommands": "${workspaceFolder}/.vscode/compile_commands.json",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
             "includePath": [
                 "${workspaceFolder}/**",                
                 "/home/caglar/Development/Qt/QtTranslation/QtTranslationWithCmake/build",

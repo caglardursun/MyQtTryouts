@@ -7,7 +7,7 @@ namespace Ps {
 class MainView;
     class SetupTab;
 
-    class Startup : public QObject
+    class Startup final : public QObject
     {
         Q_OBJECT
     public:
