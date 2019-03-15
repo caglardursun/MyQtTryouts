@@ -2,6 +2,16 @@
     <qresource prefix="/root/images"/>
     <qresource prefix="/">
         <file>images/ApplicationIcon.png</file>
+        <file>images/Clear32.png</file>
+        <file>images/connect.png</file>
+        <file>images/ControlPadW.png</file>
+        <file>images/ocean.jpg</file>
+        <file>images/Receive.png</file>
+        <file>images/Send.png</file>
+        <file>images/Setup.png</file>
+        <file>images/StopRed16.png</file>
+        <file>images/About.png</file>
+        <file>images/Exit.png</file>
     </qresource>
     <qresource prefix="/json">
         <file>settings.json</file>
