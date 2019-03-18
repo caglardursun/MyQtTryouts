@@ -13,6 +13,9 @@
         <file>images/About.png</file>
         <file>images/Exit.png</file>
     </qresource>
+     <qresource prefix="/">
+        <file>styles/darkorange.qss</file>
+    </qresource>
     <qresource prefix="/json">
         <file>settings.json</file>
     </qresource>

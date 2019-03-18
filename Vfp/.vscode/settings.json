@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "qapplication": "cpp"
+        "qapplication": "cpp",
+        "utility": "cpp",
+        "xstddef": "cpp",
+        "type_traits": "cpp"
     }
 }

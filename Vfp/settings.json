@@ -1,8 +1,8 @@
 {
-  "applicationTitle":"Virtual Front Panel - gatting Controller",
-  "applicationShortname":"VFP",
-  "hostname":"localhost",
-  "appShortname":"",
+  "applicationName":"Virtual Front Panel",
+  "applicationTitle":"Virtual Front Panel - gatting Controller",  
+  "applicationShortName":"VFP",
+  "hostName":"localhost",  
   "port": 23,
   "tcpLongWaitMs":1000,
   "tcpShortWaitMs":10,

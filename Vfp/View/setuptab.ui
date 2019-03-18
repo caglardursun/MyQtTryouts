@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Saa Ne</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
@@ -49,8 +49,8 @@
            <string>Connect</string>
           </property>
           <property name="icon">
-           <iconset resource="../VfpResources.qrc">
-            <normaloff>:/root/Images/connect.png</normaloff>:/root/Images/connect.png</iconset>
+           <iconset resource="../vfpresources.qrc">
+            <normaloff>:/images/connect.png</normaloff>:/images/connect.png</iconset>
           </property>
          </widget>
         </item>
@@ -60,8 +60,8 @@
            <string>Disconnect</string>
           </property>
           <property name="icon">
-           <iconset resource="../VfpResources.qrc">
-            <normaloff>:/root/Images/StopRed16.png</normaloff>:/root/Images/StopRed16.png</iconset>
+           <iconset resource="../vfpresources.qrc">
+            <normaloff>:/images/StopRed16.png</normaloff>:/images/StopRed16.png</iconset>
           </property>
          </widget>
         </item>
@@ -179,8 +179,8 @@
            <string>Send</string>
           </property>
           <property name="icon">
-           <iconset resource="../VfpResources.qrc">
-            <normaloff>:/root/Images/Send.png</normaloff>:/root/Images/Send.png</iconset>
+           <iconset resource="../vfpresources.qrc">
+            <normaloff>:/images/Send.png</normaloff>:/images/Send.png</iconset>
           </property>
          </widget>
         </item>
@@ -206,8 +206,8 @@
            <string>Receive</string>
           </property>
           <property name="icon">
-           <iconset resource="../VfpResources.qrc">
-            <normaloff>:/root/Images/Receive.png</normaloff>:/root/Images/Receive.png</iconset>
+           <iconset resource="../vfpresources.qrc">
+            <normaloff>:/images/Receive.png</normaloff>:/images/Receive.png</iconset>
           </property>
          </widget>
         </item>
@@ -249,8 +249,8 @@
            <string>Clear</string>
           </property>
           <property name="icon">
-           <iconset resource="../VfpResources.qrc">
-            <normaloff>:/root/Images/Clear32.png</normaloff>:/root/Images/Clear32.png</iconset>
+           <iconset resource="../vfpresources.qrc">
+            <normaloff>:/images/Clear32.png</normaloff>:/images/Clear32.png</iconset>
           </property>
          </widget>
         </item>
@@ -273,7 +273,7 @@
   <tabstop>pbClear</tabstop>
  </tabstops>
  <resources>
-  <include location="../VfpResources.qrc"/>
+  <include location="../vfpresources.qrc"/>
  </resources>
  <connections/>
 </ui>

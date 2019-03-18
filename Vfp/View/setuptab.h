@@ -17,6 +17,7 @@ namespace Ps {
         explicit SetupTab(QWidget *parent = nullptr);
         ~SetupTab();
 
+
     private:
         Ui::SetupTab *ui;
     };

@@ -42,10 +42,12 @@ set(project_headers
 set(project_dialogs "View/mainview.ui" "View/setuptab.ui")
 # end of files files ...
 
+#CMAKE_AUTOMOC will handle it so I comment it 
+
 #ui file compiled to ui_{ui_filename}.h so ...
-qt5_wrap_ui(project_header_wrap ${project_dialogs})
+#qt5_wrap_ui(project_header_wrap ${project_dialogs})
 #inside of header file we have Q_OBJECT decleration so we need to wrap 
-qt5_wrap_cpp(project_source_moc ${project_headers})
+#qt5_wrap_cpp(project_source_moc ${project_headers})
 #end of wrapping ...
 
 
