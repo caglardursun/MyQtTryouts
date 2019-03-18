@@ -6,7 +6,6 @@ namespace Ps
 
 class SetupTab;
 class ControlTab;
-class Instrument;
 class Settings;
 
 class SetupViewManager : public QObject
@@ -23,8 +22,6 @@ public:
 private:
     SetupTab& m_setupTab;
     ControlTab& m_controlTab;
-
-    
 
     explicit SetupViewManager(const SetupViewManager& rhs);
     SetupViewManager& operator= (const SetupViewManager& rhs);

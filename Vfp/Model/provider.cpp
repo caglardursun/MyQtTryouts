@@ -9,8 +9,8 @@ namespace Ps
 
     Settings& Provider::GetSettingsAsSingleton()
     {
-    static Settings instance(NULL,SETTINGS_FILE);
-    return instance;
+        static Settings instance(NULL,SETTINGS_FILE);
+        return instance;
     }
 
 } // namespace

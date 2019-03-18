@@ -7,7 +7,7 @@
 
 namespace Ps {
 
-    static auto STYLE_PREFIX = QStringLiteral(":/style");
+    //static auto STYLE_PREFIX = QStringLiteral(":/style");
 
     Startup::Startup(): QObject (nullptr),
         m_setupTab(*new SetupTab(nullptr)),

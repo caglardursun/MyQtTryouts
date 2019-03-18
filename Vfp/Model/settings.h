@@ -1,7 +1,7 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
 #include <QWidget>
-
+#include <QObject>
 
 class QString;
 class QStringListModel;
@@ -33,8 +33,8 @@ namespace Ps{
         int m_waitMs;
         int m_readWaitMs;        
         QStringListModel& m_modelCommands;
+        QString m_pwCommand;
 
-        
     private:
         QString m_fileName;
         void SendErrorMessage(const QString& msg);
@@ -42,6 +42,7 @@ namespace Ps{
         QString ReadFromInternalResource();
         void SetupCommands(QJsonObject json_obj);
         QDir OpenConfigDirectory();
+        void ShowJsonParseError(QJsonParseError json_error);
         //void ReadStyleFile();
 
         explicit Settings(const Settings& rhs) = delete;

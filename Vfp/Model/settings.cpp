@@ -19,7 +19,7 @@ namespace Ps
 {
     //resource okunurken string literal json node una erişiyor.
     static auto RESOURCE_PREFIX = QStringLiteral(":/json");
-    
+    static const int PW_COMMAND_INDEX = 5;
 
     Settings::Settings(QObject * parent, QString filename)
         : QObject (parent),          
@@ -47,7 +47,7 @@ namespace Ps
         if(json_error.error != QJsonParseError::NoError)
         {
             //Show Error ...    
-            //ShowJsonParseError(json_error);
+            ShowJsonParseError(json_error);
         }
 
         auto json_obj = json_result.first;
@@ -82,6 +82,20 @@ namespace Ps
             cmd_list.append(item.toString());
         }
         m_modelCommands.setStringList(cmd_list);
+
+         QModelIndex index = m_modelCommands.index(PW_COMMAND_INDEX);
+        QVariant test_cmd = m_modelCommands.data(index, Qt::DisplayRole);
+        //qDebug() << "Test command" << test_cmd.toString();
+        Utils::Message(tr("Test Command %1 ").arg(test_cmd.toString()));
+
+        if (PW_COMMAND_INDEX < cmd_list.size())
+        {
+            m_pwCommand = cmd_list[PW_COMMAND_INDEX];
+        }
+        else
+        {
+            NotifyStatusMessage(tr("Unable to get pulse width command."));
+        }
     }
 
     QString Settings::ReadJsonFile()
@@ -152,12 +166,22 @@ namespace Ps
 
             if(!res_file.open(QFile::ReadOnly | QFile::Text))
             {
+                SendErrorMessage(tr("Cound not open internal resource %1").arg(path));
+
                 return "";
             }
 
             QString settings = res_file.readAll();
-            Utils::Message(settings);
+            //Utils::Message(settings);
             return settings;
+    }
+
+    void Settings::ShowJsonParseError(QJsonParseError json_error)
+    {
+        
+        QString msg = tr("Error parsing JSON settings file.\n");
+        msg.append(json_error.errorString());
+        QMessageBox::critical(0,tr("VFP"),msg);
     }
 
     void Settings::SendErrorMessage(const QString& msg)
