@@ -17,6 +17,11 @@ namespace Ps {
         m_Settings.ParseJsonData();
         
         //ApplyStyles();
+       
+    }
+
+    void Startup::loadStyles() const
+    {
         QFile File(":/styles/darkorange.qss");
         if(File.open(QFile::ReadOnly))
         {
@@ -24,8 +29,6 @@ namespace Ps {
             m_mainView.setStyleSheet(StyleSheet);
         }
     }
-
-
 
     Startup::~Startup()
     {
@@ -35,5 +38,6 @@ namespace Ps {
 
     void Startup::show() const {
         m_mainView.show();
+        loadStyles();
     }
 }

@@ -18,7 +18,7 @@ namespace Ps {
         DestructorMsg(value->metaObject()->className());
     }
 
-    void Utils::Msg(QString value)
+    void Utils::Message(QString value)
     {
         qDebug() << DEFAULT_MSG.arg(value);
     }

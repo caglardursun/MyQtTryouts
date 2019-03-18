@@ -14,6 +14,9 @@ class MainView;
         Startup();
         ~Startup();
         void show() const;
+        
+    private:
+        void loadStyles() const;
     private:
         SetupTab& m_setupTab;
         MainView& m_mainView;

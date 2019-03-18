@@ -149,7 +149,7 @@ namespace Ps
             }
 
             QString settings = res_file.readAll();
-            Utils::Msg(settings);
+            Utils::Message(settings);
             return settings;
     }
 
