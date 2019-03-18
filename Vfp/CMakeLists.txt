@@ -30,6 +30,7 @@ set(project_sources
     "View/mainview.cpp"
     "View/setuptab.cpp"
     "Model/settings.cpp"
+    "ViewMng/setupviewmanager.cpp"
     )
 
 set(project_headers 
@@ -37,7 +38,9 @@ set(project_headers
     "utils.h" 
     "View/mainview.h" 
     "View/setuptab.h" 
-    "Model/settings.h")
+    "Model/settings.h"
+    "ViewMng/setupviewmanager.h"
+    )
 
 set(project_dialogs "View/mainview.ui" "View/setuptab.ui")
 # end of files files ...

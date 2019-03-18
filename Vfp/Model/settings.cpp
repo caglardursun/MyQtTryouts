@@ -11,6 +11,8 @@
 #include <QJsonArray>
 #include <QStringListModel>
 #include <QStandardPaths>
+#include <QMessageBox>
+
 #include "utils.h"
 
 namespace Ps
