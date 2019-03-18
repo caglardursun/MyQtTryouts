@@ -30,6 +30,7 @@ set(project_sources
     "View/mainview.cpp"
     "View/setuptab.cpp"
     "Model/settings.cpp"
+    "Model/provider.cpp"
     "ViewMng/setupviewmanager.cpp"
     )
 
@@ -39,6 +40,7 @@ set(project_headers
     "View/mainview.h" 
     "View/setuptab.h" 
     "Model/settings.h"
+    "Model/provider.h"
     "ViewMng/setupviewmanager.h"
     )
 
