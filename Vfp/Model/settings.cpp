@@ -23,8 +23,13 @@ namespace Ps
 
     Settings::Settings(QObject * parent, QString filename)
         : QObject (parent),          
-          m_modelCommands(* new QStringListModel(this)),
-          m_fileName(filename)
+        m_fileName(filename),
+        m_applicationName(""),
+        m_appShortName(""),
+        m_hostName("127.0.0.1"),
+        m_portNumber(555102),        
+        m_modelCommands(* new QStringListModel(this))
+          
     {        
     }
 
@@ -49,7 +54,7 @@ namespace Ps
         m_applicationName = json_obj["applicationName"].toString();
         m_appShortName = json_obj["applicationShortName"].toString();
         m_hostName = json_obj["hostName"].toString();
-        m_portNumber = json_obj["port"].toString();
+        m_portNumber = json_obj["port"].toInt();
         m_waitMs = json_obj["tcpLongWaitMs"].toInt();
         m_readWaitMs = json_obj["tcpShortWaitMs"].toInt();
         SetupCommands(json_obj);

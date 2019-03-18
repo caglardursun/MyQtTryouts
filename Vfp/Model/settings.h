@@ -29,9 +29,9 @@ namespace Ps{
         QString m_applicationName;
         QString m_appShortName;
         QString m_hostName;
-        QString m_portNumber;
+        int m_portNumber;
         int m_waitMs;
-        int m_readWaitMs;
+        int m_readWaitMs;        
         QStringListModel& m_modelCommands;
 
         
