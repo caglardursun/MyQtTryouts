@@ -3,11 +3,14 @@
 
 #include <QMainWindow>
 
-namespace Ui {
+namespace Ui 
+{
     class MainWindow;
 }
 
-namespace Miracle{
+namespace Miracle
+{
+
     class MainWindow : public QMainWindow
     {
         Q_OBJECT
