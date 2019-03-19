@@ -4,10 +4,11 @@
 #include "Model/settings.h"
 #include "utils.h"
 #include <QFile>
+#include <QDir>
 
 namespace Ps {
 
-    //static auto STYLE_PREFIX = QStringLiteral(":/style");
+    static auto STYLE_PREFIX = QStringLiteral(":/styles");
 
     Startup::Startup(): QObject (nullptr),
         m_setupTab(*new SetupTab(nullptr)),
@@ -22,12 +23,24 @@ namespace Ps {
 
     void Startup::loadStyles() const
     {
-        QFile File(":/styles/darkorange.qss");
-        if(File.open(QFile::ReadOnly))
-        {
-            QString StyleSheet = QLatin1String(File.readAll());
-            m_mainView.setStyleSheet(StyleSheet);
-        }
+
+            QDir res_dir(STYLE_PREFIX);
+            if(!res_dir.exists()){
+                //ToDo Stop complaining and cut the process                
+                abort();
+            }
+            //dark orrange qss
+            QString fileName("darkorange.qss");
+            QString path =res_dir.filePath(fileName);
+            Utils::Message(fileName);
+            Utils::Message(path);
+
+            QFile res_file(path);
+            if(res_file.open(QFile::ReadOnly))
+            {
+                QString StyleSheet = QLatin1String(res_file.readAll());
+                m_mainView.setStyleSheet(StyleSheet);
+            }           
     }
 
     Startup::~Startup()
@@ -37,7 +50,8 @@ namespace Ps {
     }
 
     void Startup::show() const {
-        m_mainView.show();
         loadStyles();
+        m_mainView.show();
+        
     }
 }

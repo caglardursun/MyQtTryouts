@@ -30,7 +30,8 @@ namespace Ps
         m_portNumber(555102),        
         m_modelCommands(* new QStringListModel(this))
           
-    {        
+    {       
+        Utils::Message(m_fileName);
     }
 
 
@@ -148,8 +149,6 @@ namespace Ps
     //             SendErrorMessage(tr("Style bullshit happened"));
     //             return;
     //     }
-
-        
     // }
 
     QString Settings::ReadFromInternalResource()
@@ -157,12 +156,15 @@ namespace Ps
             QDir res_dir(RESOURCE_PREFIX);
             if(!res_dir.exists()){
                 //ToDo Send Error message
-                SendErrorMessage(tr("Some bullshit happened"));
+                SendErrorMessage(tr("Some resource shit happened"));
                 return "";
             }
 
             auto path =res_dir.filePath(m_fileName);
+            Utils::Message(m_fileName);
+            Utils::Message(path);
             QFile res_file(path);
+            
 
             if(!res_file.open(QFile::ReadOnly | QFile::Text))
             {
