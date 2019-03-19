@@ -10,19 +10,19 @@ set(CMAKE_AUTORCC ON)
 
 find_package(Qt5 REQUIRED Core Widgets Gui Network LinguistTools)
 
-
+set(resource_files "qtcustomresource.qrc")
 #source files ...
-set(project_sources "main.cpp" "View/mainwindow.cpp")
+set(project_sources "main.cpp" "View/mainwindow.cpp" "startup.cpp")
 #header files ...
-set(project_headers "View/mainwindow.h")
+set(project_headers "View/mainwindow.h" "startup.h")
 
 set(project_dialogs "View/mainwindow.ui")
-
 
 add_executable(${PROJECT_NAME} 
                 ${project_sources} 
                 ${project_headers} 
-                ${project_dialogs}                                               
+                ${project_dialogs}      
+                ${resource_files}                                         
                 )
 
 #PUBLIC : dependencies specify that not only does library A use library B internally, it also uses B in
