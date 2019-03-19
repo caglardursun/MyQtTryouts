@@ -1,7 +1,8 @@
 # MyQtTryouts
 * Echo Server : Simple TCP/IP socker programing tryouts on Qt 
 * QtConsole : Simple console application tryouts on Qt 
-* QtQuick : Qml application theme testing
+* QtQuick : Qml application theme testing 
+* QtCustomControl : Custom control development testing
 * #### Vfp : Qt widget application which I try to figure out 
     - `How to impliment MVVM approach in c++ and Qt`
     - `How to json file parsing works in Qt libraries`
