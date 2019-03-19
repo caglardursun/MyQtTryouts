@@ -5,11 +5,14 @@
 #include <QWidget>
 
 
+class QPainter;
+
 class RenderArea : public QWidget
 {
     Q_OBJECT
 public:
     explicit RenderArea(QWidget *parent = nullptr);
+
     QSize minimumSizeHint() const Q_DECL_OVERRIDE;
     QSize sizeHint() const Q_DECL_OVERRIDE;
 protected:

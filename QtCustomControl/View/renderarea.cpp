@@ -1,6 +1,8 @@
 #include "renderarea.h"
 #include <QObject>
 #include <QPaintEvent>
+#include <QPainter>
+#include <QColor>
 
 
 
@@ -12,6 +14,11 @@ RenderArea::RenderArea(QWidget *parent)
 
 void RenderArea::paintEvent(QPaintEvent* event)
 {
+    
+	QPainter painter(this);
+    painter.setBrush(QColor(0,0,0));
+    painter.setRenderHint(QPainter::Antialiasing, true);
+    painter.drawRect(this->rect());
     
 }
 
