@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QWidget>
-
+#include <QColor>
 
 class QPainter;
 
@@ -17,6 +17,11 @@ public:
     QSize sizeHint() const Q_DECL_OVERRIDE;
 protected:
     void paintEvent(QPaintEvent* event) Q_DECL_OVERRIDE;
+
+private:
+    QColor m_backgroundColor;
+    QColor m_shapeColor;
+
 signals:
 
 public slots:
