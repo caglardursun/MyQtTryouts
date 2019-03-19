@@ -54,8 +54,10 @@ set(project_dialogs
 #CMAKE_AUTOMOC will handle it so I comment it 
 
 #ui file compiled to ui_{ui_filename}.h so ...
+
 #qt5_wrap_ui(project_header_wrap ${project_dialogs})
 #inside of header file we have Q_OBJECT decleration so we need to wrap 
+
 #qt5_wrap_cpp(project_source_moc ${project_headers})
 #end of wrapping ...
 

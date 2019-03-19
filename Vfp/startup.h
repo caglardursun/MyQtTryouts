@@ -20,10 +20,7 @@ class MainView;
     private:
         SetupTab& m_setupTab;
         MainView& m_mainView;
-
-
-        //void ApplyStyles() const;
-
+        
         explicit Startup(const Startup& rhs) = delete;
         Startup& operator = (const Startup&rhs) = delete;
 

@@ -26,13 +26,27 @@
         {
             "name": "(Windows) Launch",
             "type": "cppvsdbg",
-            "request": "launch",
+            "request": "launch",                        
             "program": "${workspaceFolder}/build/Vfp.exe",
+            "logging": { "engineLogging": true },
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false
+        },        
+        {
+            "name": "(Windows) gdb",
+            "type": "cppvsdbg",
+            "request": "launch",                        
+            "program": "${workspaceFolder}/build/Vfp.exe",
+            "logging": { "engineLogging": true },
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false
         }
+        //C:/Qt/Qt5.12.1/Tools/mingw730_64/bin/gcc.exe
     ]
 }

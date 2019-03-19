@@ -30,8 +30,7 @@ namespace Ps
         m_portNumber(555102),        
         m_modelCommands(* new QStringListModel(this))
           
-    {       
-        Utils::Message(m_fileName);
+    {        
     }
 
 
@@ -104,8 +103,6 @@ namespace Ps
         auto default_Settings =  ReadFromInternalResource();
 
         //QDir config_dir = OpenConfigurationDirectory();
-
-        //Utils::Msg(default_Settings);
 
         QDir config_dir = OpenConfigDirectory();
         auto path = config_dir.filePath(m_fileName);

@@ -2,6 +2,7 @@
 #include "View/mainview.h"
 #include "View/setuptab.h"
 #include "Model/settings.h"
+#include "Model/provider.h"
 #include "utils.h"
 #include <QFile>
 #include <QDir>
@@ -14,10 +15,8 @@ namespace Ps {
         m_setupTab(*new SetupTab(nullptr)),
         m_mainView(*new MainView(nullptr,m_setupTab))
     {
-        Settings m_Settings(this,"settings.json");
+        Settings& m_Settings = Provider::GetSettingsAsSingleton();
         m_Settings.ParseJsonData();
-        
-        //ApplyStyles();
        
     }
 
@@ -32,9 +31,7 @@ namespace Ps {
             //dark orrange qss
             QString fileName("darkorange.qss");
             QString path =res_dir.filePath(fileName);
-            Utils::Message(fileName);
-            Utils::Message(path);
-
+            
             QFile res_file(path);
             if(res_file.open(QFile::ReadOnly))
             {
