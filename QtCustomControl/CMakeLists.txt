@@ -8,6 +8,7 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
+
 find_package(Qt5 REQUIRED Core Widgets Gui Network LinguistTools)
 
 
@@ -17,11 +18,18 @@ include_directories("View" "Model")
 
 set(resource_files "qtcustomresource.qrc")
 #source files ...
-set(project_sources "main.cpp" "View/mainwindow.cpp" "View/renderarea.cpp" "startup.cpp")
+set(project_sources "main.cpp" 
+                    "View/mainwindow.cpp" 
+                    "View/renderarea.cpp" 
+                    "startup.cpp")
 #header files ...
-set(project_headers "View/mainwindow.h" "View/renderarea.h" "startup.h")
+set(project_headers "View/mainwindow.h" 
+                    "View/renderarea.h" 
+                    "startup.h")
 
 set(project_dialogs "View/mainwindow.ui")
+
+
 
 add_executable(${PROJECT_NAME} 
                 ${project_sources} 

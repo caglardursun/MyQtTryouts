@@ -3,8 +3,7 @@
         {
             "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**",
-                "${workspaceFolder}\\build\\-IQtCustomControls_autogen\\include",
+                "${workspaceFolder}/**",                
                 "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include",
                 "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtCore",
                 "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\.\\mkspecs\\win32-msvc",

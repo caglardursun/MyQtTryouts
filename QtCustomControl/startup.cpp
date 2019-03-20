@@ -7,7 +7,8 @@ namespace Miracle{
         QObject(nullptr),
         m_MainWindow(*new MainWindow(nullptr))
     {
-
+		QString str("adsdsaasd %1");
+		str.arg("dsadsadasadsdsa");
     }
 
     Startup::~Startup()

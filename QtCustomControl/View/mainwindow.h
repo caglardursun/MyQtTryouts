@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtWidgets>
 
 namespace Ui 
 {
@@ -18,7 +19,9 @@ namespace Miracle
     public:
         explicit MainWindow(QWidget *parent = nullptr);
         ~MainWindow();
-
+        //& m_listWidget;
+        //QListWidget& m_rightList;
+        QDockWidget& m_dock;
     private:
         Ui::MainWindow *ui;
     };

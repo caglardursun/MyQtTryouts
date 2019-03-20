@@ -12,6 +12,7 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
+            "symbolSearchPath": "${workspaceFolder}/build/",            
             "environment": [],
             "externalConsole": false,
         }

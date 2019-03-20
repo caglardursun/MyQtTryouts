@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="renderarea" name="renderWidget" native="true">
+   <widget class="RenderArea" name="renderWidget" native="true">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -50,7 +50,7 @@
   <customwidget>
    <class>RenderArea</class>
    <extends>QWidget</extends>
-   <header>renderarea.h</header>
+   <header location="global">renderarea.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
