@@ -3,6 +3,7 @@
 #include <QObject>
 #include <QWidget>
 #include <View/mainwindow.h>
+#include <QDockWidget>
 
 namespace Miracle{
     

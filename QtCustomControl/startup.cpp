@@ -2,13 +2,14 @@
 
 
 namespace Miracle{
+    const QString dockRight("Right");
 
     Startup::Startup() : 
         QObject(nullptr),
-        m_MainWindow(*new MainWindow(nullptr))
+        m_MainWindow( *new MainWindow(nullptr,
+        *new QDockWidget(dockRight,nullptr) ) )
     {
-		QString str("adsdsaasd %1");
-		str.arg("dsadsadasadsdsa");
+		
     }
 
     Startup::~Startup()
