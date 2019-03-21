@@ -14,6 +14,27 @@
 
 * You should have latest version of cmake 
 * VsCode will be a plus but cmake already handle the build envoirement generation
+* If you want to use debug helper make sure qt5.natvis file should be defined in `launch.json` file like ..
+
+```
+    "configurations": [        
+        {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ProjectName.exe",
+            "args": [],
+            "stopAtEntry": false,            
+            "cwd": "${workspaceFolder}",
+            "symbolSearchPath": "${workspaceFolder}/build/",            
+            "environment": [],
+            "externalConsole": false,
+            "visualizerFile": "${workspaceFolder}/../qt5.natvis"
+        }
+    ]
+
+```
+
 * If you wanna use it with vscode, make sure you've installed cmake extension
 * The source file and folder should be updated wrt. cmake build output inside of the build folder compile_commands.json file
 
