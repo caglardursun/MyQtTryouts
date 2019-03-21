@@ -3,8 +3,11 @@
 * QtConsole : Simple console application tryouts on Qt 
 * QtQuick : Qml application theme testing 
 * QtCustomControl : Custom control development testing
+    - [x] `DockLayout testing`
+    - [ ] `Custom widget implimentation`
+
 * #### Vfp : Qt widget application which I try to figure out 
-    - [] `How to impliment MVVM approach in c++ and Qt`
+    - [ ] `How to impliment MVVM approach in c++ and Qt`
     - [x] `How to json file parsing works in Qt libraries`
     - [x] `How to resource management works in Qt Application`
     - [x] `Theme and styling etc. testing`
@@ -35,8 +38,9 @@
 
 ```
 
-* If you wanna use it with vscode, make sure you've installed cmake extension
-* The source file and folder should be updated wrt. cmake build output inside of the build folder compile_commands.json file
+* The source file and folder should be updated wrt. cmake build output inside of the build folder compile_commands.json file 
+
+
 
 
 
