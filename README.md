@@ -19,7 +19,7 @@
 * VsCode will be a plus but cmake already handle the build envoirement generation
 * If you want to use debug helper make sure qt5.natvis file should be defined in `launch.json` file like ..
 
-```
+```json
     "configurations": [        
         {
             "name": "(Windows) Launch",
