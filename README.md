@@ -4,10 +4,10 @@
 * QtQuick : Qml application theme testing 
 * QtCustomControl : Custom control development testing
 * #### Vfp : Qt widget application which I try to figure out 
-    - `How to impliment MVVM approach in c++ and Qt`
-    - `How to json file parsing works in Qt libraries`
-    - `How to resource management works in Qt Application`
-    - `Theme and styling etc. testing`
+    - [] `How to impliment MVVM approach in c++ and Qt`
+    - [x] `How to json file parsing works in Qt libraries`
+    - [x] `How to resource management works in Qt Application`
+    - [x] `Theme and styling etc. testing`
 
 
 # Requirements ...
