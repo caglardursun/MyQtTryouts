@@ -15,6 +15,7 @@
             "environment": [],
             "externalConsole": true,
             "MIMode": "gdb",
+            "visualizerFile": "${workspaceFolder}/../qt5.natvis",
             "setupCommands": [
                 {
                     "description": "Enable pretty-printing for gdb",
@@ -24,27 +25,17 @@
             ]
         },
         {
-            "name": "(Windows) Launch",
+            "name": "Windows",
             "type": "cppvsdbg",
             "request": "launch",                        
-            "program": "${workspaceFolder}/build/Vfp.exe",
+            "program": "${command:cmake.launchTargetPath}",
             "logging": { "engineLogging": true },
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false
-        },        
-        {
-            "name": "(Windows) gdb",
-            "type": "cppvsdbg",
-            "request": "launch",                        
-            "program": "${workspaceFolder}/build/Vfp.exe",
-            "logging": { "engineLogging": true },
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
+            "visualizerFile": "${workspaceFolder}/../qt5.natvis",
+            
             "externalConsole": false
         }
         //C:/Qt/Qt5.12.1/Tools/mingw730_64/bin/gcc.exe
