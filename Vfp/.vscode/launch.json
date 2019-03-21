@@ -8,7 +8,7 @@
             "name": "Linux",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/build/Vfp",
+            "program": "${command:cmake.launchTargetPath}",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
