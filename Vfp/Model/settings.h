@@ -1,5 +1,6 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
+
 #include <QWidget>
 #include <QObject>
 
@@ -22,6 +23,16 @@ namespace Ps{
         explicit Settings(QObject * parent, QString filename);
         void ParseJsonData();
         JsonObjErrorPair GetJsonObject(const QString& rawJson);
+
+        QString getApplicationName() const { return m_applicationName; }
+        QString getAppShortName() const { return m_appShortName; }
+        QString getHostName() const { return m_hostName; }
+        quint16 getPortNumber() const { return m_portNumber; }
+        int getShortWaitMs() const { return  m_shortWaitMs; }
+        int getLongWaitMs() const { return m_longWaitMs; }
+        QStringListModel& getCommandsAsModel() const { return m_modelCommands; }
+        QString GetPwCommand() const { return m_pwCommand; }
+
     signals:
         void NotifyStatusMessage(QString message);
 
@@ -30,8 +41,8 @@ namespace Ps{
         QString m_appShortName;
         QString m_hostName;
         int m_portNumber;
-        int m_waitMs;
-        int m_readWaitMs;        
+        int m_longWaitMs;
+        int m_shortWaitMs;        
         QStringListModel& m_modelCommands;
         QString m_pwCommand;
 
@@ -43,7 +54,7 @@ namespace Ps{
         void SetupCommands(QJsonObject json_obj);
         QDir OpenConfigDirectory();
         void ShowJsonParseError(QJsonParseError json_error);
-        //void ReadStyleFile();
+        void WriteDefaultsToStdConfigFile(QFile& stdConfigFile,const QString& settings);
 
         explicit Settings(const Settings& rhs) = delete;
         Settings& operator = (const Settings& rhs) = delete;

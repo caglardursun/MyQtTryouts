@@ -13,8 +13,8 @@ find_package(Qt5 REQUIRED Core Widgets Gui Network LinguistTools)
 
 
 #add directories to seee what's inside
+#include_directories("View" "Model")
 include_directories("View" "Model")
-
 
 set(resource_files "qtcustomresource.qrc")
 #source files ...

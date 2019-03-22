@@ -5,15 +5,17 @@ namespace Ps{
 
 class Settings;
 
-class Provider
-{
-public:
-    Provider();
-    static Settings& GetSettingsAsSingleton();
+    class Provider final
+    {
+        public:
+            Provider();
+            static Settings& GetSettingsAsSingleton();
 
-private:
-    explicit Provider(const Provider& rhs);
-    Provider& operator= (const Provider& rhs);
-};
+        private:
+            static std::unique_ptr<Settings> m_instanceSettings;            
+
+            explicit Provider(const Provider& rhs);
+            Provider& operator= (const Provider& rhs);
+    };
 
 }

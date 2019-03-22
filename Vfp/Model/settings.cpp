@@ -27,7 +27,8 @@ namespace Ps
         m_applicationName(""),
         m_appShortName(""),
         m_hostName("127.0.0.1"),
-        m_portNumber(555102),        
+        m_portNumber(555102),    
+        m_shortWaitMs(100),    
         m_modelCommands(* new QStringListModel(this))
           
     {        
@@ -50,18 +51,18 @@ namespace Ps
             ShowJsonParseError(json_error);
         }
 
-        auto json_obj = json_result.first;
+        QJsonObject json_obj = json_result.first;
         m_applicationName = json_obj["applicationName"].toString();
         m_appShortName = json_obj["applicationShortName"].toString();
         m_hostName = json_obj["hostName"].toString();
         m_portNumber = json_obj["port"].toInt();
-        m_waitMs = json_obj["tcpLongWaitMs"].toInt();
-        m_readWaitMs = json_obj["tcpShortWaitMs"].toInt();
+        m_longWaitMs = json_obj["tcpLongWaitMs"].toInt();
+        m_shortWaitMs = json_obj["tcpShortWaitMs"].toInt();
         SetupCommands(json_obj);
 
     }
 
-    
+     
 
     JsonObjErrorPair Settings::GetJsonObject(const QString& rawJson)
     {
@@ -85,8 +86,6 @@ namespace Ps
 
          QModelIndex index = m_modelCommands.index(PW_COMMAND_INDEX);
         QVariant test_cmd = m_modelCommands.data(index, Qt::DisplayRole);
-        //qDebug() << "Test command" << test_cmd.toString();
-        Utils::Message(tr("Test Command %1 ").arg(test_cmd.toString()));
 
         if (PW_COMMAND_INDEX < cmd_list.size())
         {
@@ -116,10 +115,36 @@ namespace Ps
                 SendErrorMessage(tr("Could not open %1").arg(path));
 
                 return default_Settings;
+            }else{
+                    WriteDefaultsToStdConfigFile(std_file,default_Settings);
             }
         }
 
         return default_Settings;
+    }
+
+    void Settings::WriteDefaultsToStdConfigFile(QFile& stdConfigFile,
+                                                const QString& settings)
+    {
+        int length = settings.length();
+        if (!stdConfigFile.open(QFile::WriteOnly|QFile::Text))
+        {
+            SendErrorMessage("Could not open file to write " + stdConfigFile.fileName());
+        }
+        else
+        {
+            qint64 bytes_written = stdConfigFile.write(qPrintable(settings),length);
+            if (bytes_written != length)
+            {
+            SendErrorMessage("Could not write default settings to " + stdConfigFile.fileName());
+            if (!stdConfigFile.remove())
+            {
+                SendErrorMessage("Count not remove configuration file. Please delete " +
+                                stdConfigFile.fileName());
+            }
+            }
+            stdConfigFile.close();
+        }
     }
 
     QDir Settings::OpenConfigDirectory()
@@ -134,19 +159,11 @@ namespace Ps
                 abort();
             }
         }
+        
         return config_dir;
     }
 
-    //We will keep going on ..
-    // void Settings::ReadStyleFile()
-    // {
-    //     QDir style_dir(STYLE_PREFIX);
-    //     if(!style_dir.exists()){
-    //             //ToDo Send Error message
-    //             SendErrorMessage(tr("Style bullshit happened"));
-    //             return;
-    //     }
-    // }
+
 
     QString Settings::ReadFromInternalResource()
     {
@@ -158,8 +175,7 @@ namespace Ps
             }
 
             auto path =res_dir.filePath(m_fileName);
-            Utils::Message(m_fileName);
-            Utils::Message(path);
+            
             QFile res_file(path);
             
 
@@ -170,8 +186,7 @@ namespace Ps
                 return "";
             }
 
-            QString settings = res_file.readAll();
-            //Utils::Message(settings);
+            QString settings = res_file.readAll();            
             return settings;
     }
 

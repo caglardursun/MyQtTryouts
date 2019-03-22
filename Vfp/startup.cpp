@@ -6,18 +6,20 @@
 #include "utils.h"
 #include <QFile>
 #include <QDir>
+#include <QMessageBox>
 
 namespace Ps {
 
     static auto STYLE_PREFIX = QStringLiteral(":/styles");
 
-    Startup::Startup(): QObject (nullptr),
+    Startup::Startup(): 
+        QObject (nullptr),
         m_setupTab(*new SetupTab(nullptr)),
         m_mainView(*new MainView(nullptr,m_setupTab))
     {
         Settings& m_Settings = Provider::GetSettingsAsSingleton();
         m_Settings.ParseJsonData();
-       
+        QMessageBox::critical(0,tr("VFP"),tr("31"));
     }
 
     void Startup::loadStyles() const

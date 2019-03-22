@@ -3,18 +3,19 @@
     // Mevcut özniteliklerin açıklamalarını görmek için fare ile üzerine gelin.
     // Daha fazla bilgi için ziyaret edin: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": [
+    "configurations": [        
         {
             "name": "(Windows) Launch",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/build/QtCustomControls.exe",
             "args": [],
-            "stopAtEntry": false,
+            "stopAtEntry": false,            
             "cwd": "${workspaceFolder}",
             "symbolSearchPath": "${workspaceFolder}/build/",            
             "environment": [],
             "externalConsole": false,
+            "visualizerFile": "${workspaceFolder}/../qt5.natvis"
         }
     ]
 }

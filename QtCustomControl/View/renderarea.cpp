@@ -17,7 +17,6 @@ RenderArea::RenderArea(QWidget *parent)
 
 void RenderArea::paintEvent(QPaintEvent* event)
 {
-        
         QPainter painter(this);
         painter.setBrush(m_backgroundColor);
         painter.setRenderHint(QPainter::Antialiasing, true);

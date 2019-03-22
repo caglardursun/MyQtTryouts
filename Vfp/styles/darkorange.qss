@@ -10,7 +10,7 @@ QToolTip
 QWidget
 {
     color: #b1b1b1;
-    background-color: #323232;
+    background-color: #323232;    
 }
 
 QWidget:item:hover
@@ -204,7 +204,7 @@ QScrollBar::right-arrow:horizontal, QScrollBar::left-arrow:horizontal
       border: 1px solid black;
       width: 1px;
       height: 1px;
-      background: white;
+      background: white;      
 }
 
 QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal

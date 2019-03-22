@@ -15,7 +15,8 @@
   </property>
   <property name="windowIcon">
    <iconset resource="../vfpresources.qrc">
-    <normaloff>:/images/ApplicationIcon.png</normaloff>:/images/ApplicationIcon.png</iconset>
+      <normaloff>:/images/ApplicationIcon.png</normaloff>:/images/ApplicationIcon.png
+    </iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
