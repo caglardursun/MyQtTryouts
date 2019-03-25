@@ -19,7 +19,7 @@ namespace Ps {
     {
         Settings& m_Settings = Provider::GetSettingsAsSingleton();
         m_Settings.ParseJsonData();
-        QMessageBox::critical(0,tr("VFP"),tr("31"));
+        
     }
 
     void Startup::loadStyles() const

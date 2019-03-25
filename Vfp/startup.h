@@ -1,5 +1,4 @@
-#ifndef STARTUP_H
-#define STARTUP_H
+#pragma once
 #include <QObject>
 
 namespace Ps {
@@ -26,6 +25,6 @@ class MainView;
 
     };
 }
-#endif // STARTUP_H
+
 
 
