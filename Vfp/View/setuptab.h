@@ -1,6 +1,4 @@
-#ifndef SETUPTAB_H
-#define SETUPTAB_H
-
+#pragma once
 #include <QWidget>
 
 namespace Ui {
@@ -24,4 +22,4 @@ namespace Ps {
 
 }
 
-#endif // SETUPTAB_H
+

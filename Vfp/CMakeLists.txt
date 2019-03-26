@@ -23,6 +23,16 @@ find_package(Qt5 REQUIRED Core Widgets Gui Network LinguistTools)
 set(resource_files 
     "vfpresources.qrc")
 
+include_directories("View")
+include_directories("Model")
+include_directories("ViewMng")
+
+file(GLOB source "*.cpp")
+file(GLOB header "*.cpp")
+
+message(${source})
+message(${header})
+
 
 #source files ...
 set(project_sources 
@@ -33,8 +43,12 @@ set(project_sources
     "View/setuptab.cpp"
     "Model/settings.cpp"
     "Model/provider.cpp"
+    "Model/instsocket.cpp"
+    "Model/instrument.cpp" 
     "ViewMng/setupviewmanager.cpp"
     )
+
+    
 #header files ...
 set(project_headers 
     "startup.h" 
@@ -43,12 +57,16 @@ set(project_headers
     "View/setuptab.h" 
     "Model/settings.h"
     "Model/provider.h"
+    "Model/instrument.h" 
+    "Model/instsocket.h"
     "ViewMng/setupviewmanager.h"
     )
 
 set(project_dialogs 
+    # "View/controltab.ui"
     "View/mainview.ui" 
     "View/setuptab.ui")
+    
 # end of files files ...
 
 #CMAKE_AUTOMOC will handle it so I comment it 

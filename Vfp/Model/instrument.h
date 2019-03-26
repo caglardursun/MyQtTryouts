@@ -11,7 +11,7 @@ namespace Ps
     {
         Q_OBJECT
     public:
-        explicit Instrument(QObject *parent, InstSocket& sock, Settings &config);
+        Instrument(QObject *parent, InstSocket& sock, Settings &config);
         ~Instrument();
 
         void Connect();

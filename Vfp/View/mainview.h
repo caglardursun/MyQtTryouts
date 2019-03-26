@@ -1,6 +1,4 @@
-#ifndef MAINVIEW_H
-#define MAINVIEW_H
-
+#pragma once
 #include <QMainWindow>
 
 namespace Ui {
@@ -23,4 +21,3 @@ namespace Ps {
 }
 
 
-#endif // MAINVIEW_H

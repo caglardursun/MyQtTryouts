@@ -4,7 +4,7 @@
 * QtQuick : Qml application theme testing 
 * QtCustomControl : Custom control development testing
     - [x] `DockLayout testing`
-    - [ ] `Custom widget implimentation`
+    - [x] `Custom widget implimentation`
 
 * #### Vfp : Qt widget application which I try to figure out 
     - [ ] `How to impliment MVVM approach in c++ and Qt`

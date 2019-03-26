@@ -1,6 +1,9 @@
 #include <QTcpSocket>
 #include <QDebug>
 #include "instsocket.h"
+#include "provider.h"
+#include "settings.h"
+
 #include "utils.h"
 
 namespace Ps
@@ -41,6 +44,7 @@ namespace Ps
                 << m_port
                 << " with wait of "
                 << m_longWaitMs;
+
         m_socket.connectToHost(m_hostName,m_port,QTcpSocket::ReadWrite);
         return m_socket.waitForConnected(m_longWaitMs);
     }
