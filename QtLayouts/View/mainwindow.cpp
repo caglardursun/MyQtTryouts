@@ -10,10 +10,9 @@ namespace Miracle
     {
         ui->setupUi(this);
 
-
         auto dock = new QDockWidget(tr("Left"), this);
         dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea | Qt::BottomDockWidgetArea); 
-          
+
         QListWidget& listWidget(*new QListWidget(dock));        
         
         listWidget.addItems(QStringList()

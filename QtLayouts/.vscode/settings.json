@@ -2,6 +2,7 @@
     "files.associations": {
         "*.cs": "csharp",
         "qtwidgets": "cpp",
-        "qtranslator": "cpp"
+        "qtranslator": "cpp",
+        "utility": "cpp"
     }
 }

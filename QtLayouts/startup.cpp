@@ -20,7 +20,8 @@ namespace Miracle
         QObject(nullptr),        
         m_MainWindow( *new MainWindow(nullptr) )
     {		
-        
+        Settings& settings = Provider::GetSettingsAsSingleton();
+        settings.ParseJsonData();        
     }
     //Layout düzenlemeleri burada olacak ayarlara göre startup da 
     //stiller 
@@ -37,12 +38,16 @@ namespace Miracle
             //wrt. settings we will load the qss file
 
             QDir res_dir(STYLE_PREFIX);
-            if(!res_dir.exists()){
+            if(!res_dir.exists())
+            {
                 //ToDo Stop complaining and cut the process                
                 abort();
             }
             //dark orrange qss
-            QString fileName("darkorange.qss");
+            Settings& currentSetting = Provider::GetSettingsAsSingleton();
+            QString fileName("%1.qss");
+            fileName = fileName.arg(currentSetting.getCurrentStyle());
+            
             QString path =res_dir.filePath(fileName);
             
             QFile res_file(path);
@@ -80,7 +85,7 @@ namespace Miracle
         loadStyles();
         loadLanguages();
         //Progress bar will be usefull 
-        
+
         m_MainWindow.show();
     }
 }

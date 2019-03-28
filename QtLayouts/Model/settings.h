@@ -26,6 +26,8 @@ namespace Miracle
 
         QString getApplicationName() const { return m_applicationName; }
         QString getAppShortName() const { return m_appShortName; }        
+        QString getCurrentLanguage() const {return m_currentLanguage; }
+        QString getCurrentStyle() const {return m_currentStyle; }
 
     signals:
         void NotifyStatusMessage(QString message);
@@ -33,6 +35,8 @@ namespace Miracle
     private:
         QString m_applicationName;
         QString m_appShortName;
+        QString m_currentLanguage;
+        QString m_currentStyle;
     
         QString m_fileName;
         void SendErrorMessage(const QString& msg);

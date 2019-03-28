@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="tr_TR">
+<TS version="2.1">
 <context>
     <name>MainWindow</name>
     <message>
@@ -13,14 +13,14 @@
 <context>
     <name>Miracle::MainWindow</name>
     <message>
-        <location filename="../View/mainwindow.cpp" line="14"/>
+        <location filename="../View/mainwindow.cpp" line="13"/>
         <source>Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="30"/>
+        <location filename="../View/mainwindow.cpp" line="29"/>
         <source>Right</source>
-        <translation>Sağ</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -28,33 +28,43 @@
     <message>
         <location filename="../Model/settings.cpp" line="83"/>
         <source>Could not open %1</source>
-        <translation>%1 yolundaki dosya açılamıyor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="126"/>
+        <location filename="../Model/settings.cpp" line="92"/>
+        <source>Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Model/settings.cpp" line="92"/>
+        <source>Writing default configuration should be implimented !</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Model/settings.cpp" line="130"/>
         <source>Could not create configuration directory</source>
-        <translation>Konfigürasyon klasörü oluşturulamıyor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="141"/>
+        <location filename="../Model/settings.cpp" line="145"/>
         <source>Some resource shit happened</source>
-        <translation>Bir şeyler oldu</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="152"/>
+        <location filename="../Model/settings.cpp" line="156"/>
         <source>Cound not open internal resource %1</source>
-        <translation>%1 pathindeki resource dosyası açılamıyor</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="164"/>
+        <location filename="../Model/settings.cpp" line="168"/>
         <source>Error parsing JSON settings file.
 </source>
-        <translation>Json dosyasında illegal karakterler var</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="166"/>
+        <location filename="../Model/settings.cpp" line="170"/>
         <source>VFP</source>
-        <translation>Miracle</translation>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

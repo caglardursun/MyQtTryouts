@@ -33,6 +33,10 @@ set(project_headers "View/mainwindow.h"
 
 set(project_dialogs "View/mainwindow.ui")
 
+
+#set output location
+#set_source_files_properties(${QM_FILES} PROPERTIES OUTPUT_LOCATION "lang")
+
 #add translation files
 qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} "languages/turkish.ts" "languages/english.ts")
 

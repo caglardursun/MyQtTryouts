@@ -48,7 +48,9 @@ namespace Miracle
 
         QJsonObject json_obj = json_result.first;
         m_applicationName = json_obj["applicationName"].toString();
-        m_appShortName = json_obj["applicationShortName"].toString();        
+        m_appShortName = json_obj["applicationShortName"].toString();     
+        m_currentLanguage = json_obj["currentLanguage"].toString();
+        m_currentStyle = json_obj["currentStyle"].toString();
 
     }
 
@@ -67,9 +69,7 @@ namespace Miracle
 
     QString Settings::ReadJsonFile()
     {
-        auto default_Settings =  ReadFromInternalResource();
-
-        //QDir config_dir = OpenConfigurationDirectory();
+        auto default_Settings =  ReadFromInternalResource();        
 
         QDir config_dir = OpenConfigDirectory();
         auto path = config_dir.filePath(m_fileName);
@@ -81,18 +81,22 @@ namespace Miracle
             if(!std_file.open( QFile::ReadOnly | QFile::Text))
             {
                 SendErrorMessage(tr("Could not open %1").arg(path));
-
-                return default_Settings;
-            }else{
-                    WriteDefaultsToStdConfigFile(std_file,default_Settings);
+                return default_Settings;            
             }
+            else
+            {
+                WriteDefaultsToStdConfigFile(std_file,default_Settings);
+            }
+        }else
+        {
+            QMessageBox::information(nullptr,tr("Message"),tr("Writing default configuration should be implimented !"));
+            //WriteDefaultsToStdConfigFile(std_file, this);
         }
 
         return default_Settings;
     }
 
-    void Settings::WriteDefaultsToStdConfigFile(QFile& stdConfigFile,
-                                                const QString& settings)
+    void Settings::WriteDefaultsToStdConfigFile(QFile& stdConfigFile,const QString& settings)
     {
         int length = settings.length();
         if (!stdConfigFile.open(QFile::WriteOnly|QFile::Text))
