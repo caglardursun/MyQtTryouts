@@ -1,6 +1,16 @@
 {
     "applicationName":"Miracle Colorway",
     "applicationTitle":"Miracle Colorway Panel",  
-    "applicationShortName":"Miracle"    
+    "applicationShortName":"Miracle",
+    "language" : "",
+    "languages" : [
+      "Türkçe",
+      "English"
+    ],
+    "currentStyle":"darkorange",    
+    "styles": [
+      "darkorange",
+      "darkblue"
+    ]
   }
   

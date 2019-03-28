@@ -9,7 +9,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 
-find_package(Qt5 REQUIRED Core Widgets Gui Network LinguistTools)
+find_package(Qt5 REQUIRED Core Widgets Gui LinguistTools)
 
 
 #add directories to seee what's inside
@@ -33,13 +33,15 @@ set(project_headers "View/mainwindow.h"
 
 set(project_dialogs "View/mainwindow.ui")
 
-
+#add translation files
+qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} "languages/turkish.ts" "languages/english.ts")
 
 add_executable(${PROJECT_NAME} 
                 ${project_sources} 
                 ${project_headers} 
                 ${project_dialogs}      
-                ${resource_files}                                         
+                ${resource_files}      
+                ${QM_FILES}                                   
                 )
 
 #PUBLIC : dependencies specify that not only does library A use library B internally, it also uses B in
@@ -56,4 +58,4 @@ add_executable(${PROJECT_NAME}
 #defined using the INTERFACE form of add_library(), such as when using a target to represent a
 #header-only library’s dependencies
 
-target_link_libraries(${PROJECT_NAME} PUBLIC Qt5::Core Qt5::Widgets Qt5::Gui Qt5::Network)
+target_link_libraries(${PROJECT_NAME} PUBLIC Qt5::Core Qt5::Widgets Qt5::Gui)

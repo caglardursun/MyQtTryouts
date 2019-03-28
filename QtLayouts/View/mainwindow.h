@@ -16,9 +16,9 @@ namespace Miracle
         Q_OBJECT
 
     public:
-        explicit MainWindow(QWidget *parent,QDockWidget& dockWidget);
+        explicit MainWindow(QWidget *parent);
         ~MainWindow();        
-       QDockWidget& m_dock;
+       
     private:
         Ui::MainWindow *ui;
     };

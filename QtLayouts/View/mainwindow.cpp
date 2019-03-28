@@ -4,15 +4,17 @@
 namespace Miracle
 {
 
-    MainWindow::MainWindow(QWidget *parent, QDockWidget& dockWidget) :
+    MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
-        ui(new Ui::MainWindow),
-        m_dock(dockWidget)        
+        ui(new Ui::MainWindow)               
     {
         ui->setupUi(this);
-           
-        m_dock.setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea | Qt::BottomDockWidgetArea);   
-        QListWidget& listWidget(*new QListWidget(&m_dock));        
+
+
+        auto dock = new QDockWidget(tr("Left"), this);
+        dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea | Qt::BottomDockWidgetArea); 
+          
+        QListWidget& listWidget(*new QListWidget(dock));        
         
         listWidget.addItems(QStringList()
             << "L1"
@@ -22,7 +24,7 @@ namespace Miracle
             << "L5"
             << "L6");
         //Allow left right and bottom
-        m_dock.setWidget(&listWidget);
+        dock->setWidget(&listWidget);
 
 
         auto dock2 = new QDockWidget(tr("Right"), this);
@@ -36,8 +38,9 @@ namespace Miracle
             );
         dock2->setWidget(list2);
 
+        addDockWidget(Qt::LeftDockWidgetArea, dock);        
         addDockWidget(Qt::RightDockWidgetArea, dock2);
-        addDockWidget(Qt::LeftDockWidgetArea, &m_dock);        
+        
     }
 
     MainWindow::~MainWindow()

@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>images/favicon.ico</file>        
         <file>styles/darkorange.qss</file>
+        <file>styles/darkblue.qss</file>
     </qresource>
     <qresource prefix="/json">
         <file>settings.json</file>
