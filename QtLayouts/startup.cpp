@@ -67,10 +67,10 @@ namespace Miracle
         QTranslator translator;
         
         //get the language from settings ...
-        bool bResult = translator.load("Turkish.qm");
+        bool bResult = translator.load("türkçe.qm");
         if(!bResult)
         {
-           
+           QMessageBox::information(nullptr,tr("Message"),tr("Could not load language file"));
         }
         else
         {

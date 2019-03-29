@@ -67,4 +67,17 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
+<context>
+    <name>Miracle::Startup</name>
+    <message>
+        <location filename="../startup.cpp" line="73"/>
+        <source>Message</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../startup.cpp" line="73"/>
+        <source>Could not load language file</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
 </TS>

@@ -1,6 +1,7 @@
 ### startup class
-    [ ] loadStyles metodu settings lerde tanımlı temaya göre yüklemeli 
-    [ ] multilanguage desteği eklenmeli (Hem Cmake e hem de )
+    [x] loadStyles metodu settings lerde tanımlı temaya göre yüklemeli 
+    [x] multilanguage desteği eklenmeli (Hem Cmake e hem de )
+    [ ] logging
 
 ### ViewModel
     [ ] ViewModel içerisinde viewmanager lar yazılmalı
