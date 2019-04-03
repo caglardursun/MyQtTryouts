@@ -40,67 +40,67 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="17"/>
+        <location filename="../View/mainwindow.cpp" line="21"/>
         <source>Left</source>
         <translation type="unfinished">Sol</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="23"/>
+        <location filename="../View/mainwindow.cpp" line="27"/>
         <source>L1</source>
         <translation type="unfinished">S1</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="24"/>
+        <location filename="../View/mainwindow.cpp" line="28"/>
         <source>L2</source>
         <translation type="unfinished">S2</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="25"/>
+        <location filename="../View/mainwindow.cpp" line="29"/>
         <source>L3</source>
         <translation type="unfinished">S3</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="26"/>
+        <location filename="../View/mainwindow.cpp" line="30"/>
         <source>L4</source>
         <translation type="unfinished">S4</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="27"/>
+        <location filename="../View/mainwindow.cpp" line="31"/>
         <source>L5</source>
         <translation type="unfinished">S5</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="28"/>
+        <location filename="../View/mainwindow.cpp" line="32"/>
         <source>L6</source>
         <translation type="unfinished">S6</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="33"/>
+        <location filename="../View/mainwindow.cpp" line="37"/>
         <source>Right</source>
         <translation type="unfinished">Sağ</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="36"/>
+        <location filename="../View/mainwindow.cpp" line="40"/>
         <source>R1</source>
         <translation type="unfinished">S1</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="37"/>
+        <location filename="../View/mainwindow.cpp" line="41"/>
         <source>R2</source>
         <translation type="unfinished">S2</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="38"/>
+        <location filename="../View/mainwindow.cpp" line="42"/>
         <source>R3</source>
         <translation type="unfinished">S3</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="39"/>
+        <location filename="../View/mainwindow.cpp" line="43"/>
         <source>R4</source>
         <translation type="unfinished">S4</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="40"/>
+        <location filename="../View/mainwindow.cpp" line="44"/>
         <source>R5</source>
         <translation type="unfinished">S5</translation>
     </message>
@@ -207,14 +207,8 @@
 <context>
     <name>Miracle::Startup</name>
     <message>
-        <location filename="../startup.cpp" line="76"/>
         <source>Message</source>
-        <translation>Mesaj</translation>
-    </message>
-    <message>
-        <location filename="../startup.cpp" line="76"/>
-        <source>Could not load language file</source>
-        <translation></translation>
+        <translation type="vanished">Mesaj</translation>
     </message>
 </context>
 </TS>

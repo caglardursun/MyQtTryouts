@@ -64,23 +64,22 @@ namespace Miracle
     void Startup::loadLanguages() const
     {
         
-        QTranslator translator;        
+        // QTranslator translator;        
         
-        //get the language from settings ...
-        Settings& currentSetting = Provider::GetSettingsAsSingleton();
-        QString lang("%1.qm");
-        lang = lang.arg(currentSetting.getCurrentLanguage());
-        bool bResult = translator.load(lang);
-        if(!bResult)
-        {
-           QMessageBox::information(nullptr,tr("Message"),tr("Could not load language file"));
-        }
-        else
-        {
-            //Why it's not working ?
-            m_MainWindow.changeTranslation(translator,lang);
-            
-        }
+        // //get the language from settings ...
+        // Settings& currentSetting = Provider::GetSettingsAsSingleton();
+        // QString lang("%1.qm");
+        // lang = lang.arg(currentSetting.getCurrentLanguage());
+        // bool bResult = translator.load(lang);
+        // if(!bResult)
+        // {
+        //    QMessageBox::information(nullptr,tr("Message"),tr("Could not load language file"));
+        // }
+        // else
+        // {
+        //     //Why it's not working ?
+        //     m_MainWindow.changeTranslation(translator,lang);
+        // }
     }
      
 
@@ -88,7 +87,7 @@ namespace Miracle
     {
         //Progress bar will be usefull 
         loadStyles();
-        loadLanguages();
+        //loadLanguages();
         //Progress bar will be usefull 
 
         m_MainWindow.show();

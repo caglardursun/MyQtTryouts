@@ -11,8 +11,14 @@
     }
 
     void MainWindow::Init()
+    {   
+        createDock();    
+        createLanguageMenu();        
+    }
+
+    void MainWindow::createDock()
     {
-        auto dock = new QDockWidget(tr("Left"), this);
+         auto dock = new QDockWidget(tr("Left"), this);
         dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea | Qt::BottomDockWidgetArea); 
 
         QListWidget& listWidget(*new QListWidget(dock));        
@@ -41,8 +47,6 @@
 
         addDockWidget(Qt::LeftDockWidgetArea, dock);        
         addDockWidget(Qt::RightDockWidgetArea, dock2); 
-
-        createLanguageMenu();
     }
 
     void MainWindow::changeEvent(QEvent* event)
@@ -54,6 +58,11 @@
             case QEvent::LanguageChange:
                 ui->retranslateUi(this);
             break;
+             case QEvent::LocaleChange:
+            {
+                QString locale = Provider::GetSettingsAsSingleton().getCurrentLanguage();                
+                loadLanguage(locale);
+            }
           }
          }
 
@@ -153,7 +162,7 @@
        {
             QApplication::instance()->installTranslator(&translator);
             qApp->installTranslator(&translator);
-            ui->retranslateUi(this);    
+            //ui->retranslateUi(this);    
             //Init();      
        }       
        

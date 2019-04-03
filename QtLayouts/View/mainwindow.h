@@ -30,7 +30,7 @@ class MainWindow : public QMainWindow
             void Init();
             void createLanguageMenu();
             void loadLanguage(const QString& rLanguage);
-
+            void createDock();
 
             QTranslator m_translator; // contains the translations for this application
             QTranslator m_translatorQt; // contains the translations for qt
