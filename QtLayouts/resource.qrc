@@ -5,7 +5,49 @@
         <file>styles/darkblue.qss</file>        
         <file>images/english.png</file>
         <file>images/turkce.png</file>
-    </qresource>
+        <file>images/dark/darkbranch_closed-on.svg</file>
+        <file>images/dark/darkbranch_closed.svg</file>
+        <file>images/dark/darkbranch_open-on.svg</file>
+        <file>images/dark/darkbranch_open.svg</file>
+        <file>images/dark/darkcheckbox_checked.svg</file>
+        <file>images/dark/darkcheckbox_checked_disabled.svg</file>
+        <file>images/dark/darkcheckbox_indeterminate.svg</file>
+        <file>images/dark/darkcheckbox_indeterminate_disabled.svg</file>
+        <file>images/dark/darkcheckbox_unchecked.svg</file>
+        <file>images/dark/darkcheckbox_unchecked_disabled.svg</file>
+        <file>images/dark/darkclose-hover.svg</file>
+        <file>images/dark/darkclose-pressed.svg</file>
+        <file>images/dark/darkclose.svg</file>
+        <file>images/dark/darkdown_arrow-hover.svg</file>
+        <file>images/dark/darkdown_arrow.svg</file>
+        <file>images/dark/darkdown_arrow_disabled.svg</file>
+        <file>images/dark/darkhmovetoolbar.svg</file>
+        <file>images/dark/darkhsepartoolbar.svg</file>
+        <file>images/dark/darkleft_arrow.svg</file>
+        <file>images/dark/darkleft_arrow_disabled.svg</file>
+        <file>images/dark/darklist.py</file>
+        <file>images/dark/darkradio_checked.svg</file>
+        <file>images/dark/darkradio_checked_disabled.svg</file>
+        <file>images/dark/darkradio_unchecked.svg</file>
+        <file>images/dark/darkradio_unchecked_disabled.svg</file>
+        <file>images/dark/darkright_arrow.svg</file>
+        <file>images/dark/darkright_arrow_disabled.svg</file>
+        <file>images/dark/darksizegrip.svg</file>
+        <file>images/dark/darkspinup_disabled.svg</file>
+        <file>images/dark/darkstylesheet-branch-end-closed.svg</file>
+        <file>images/dark/darkstylesheet-branch-end-open.svg</file>
+        <file>images/dark/darkstylesheet-branch-end.svg</file>
+        <file>images/dark/darkstylesheet-branch-more.svg</file>
+        <file>images/dark/darkstylesheet-vline.svg</file>
+        <file>images/dark/darktransparent.svg</file>
+        <file>images/dark/darkundock-hover.svg</file>
+        <file>images/dark/darkundock.svg</file>
+        <file>images/dark/darkup_arrow-hover.svg</file>
+        <file>images/dark/darkup_arrow.svg</file>
+        <file>images/dark/darkup_arrow_disabled.svg</file>
+        <file>images/dark/darkvmovetoolbar.svg</file>
+        <file>images/dark/darkvsepartoolbars.svg</file>
+    </qresource>dark/
     <qresource prefix="/json">
         <file>settings.json</file>
     </qresource>

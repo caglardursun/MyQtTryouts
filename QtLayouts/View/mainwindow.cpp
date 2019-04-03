@@ -13,15 +13,17 @@
     void MainWindow::Init()
     {   
         createDock();    
-        createLanguageMenu();        
+        createLanguageMenu();       
+
+        Settings& setting = Provider::GetSettingsAsSingleton(); 
+        loadLanguage(setting.getCurrentLanguage());
     }
 
     void MainWindow::createDock()
     {
          auto dock = new QDockWidget(tr("Left"), this);
         dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea | Qt::BottomDockWidgetArea); 
-
-        QListWidget& listWidget(*new QListWidget(dock));        
+        QListWidget& listWidget(*new QListWidget(dock));
         
         listWidget.addItems(QStringList()
             << tr("L1")
@@ -98,6 +100,7 @@
             //locale.remove(0, locale.indexOf('.') + 1); // "de"
 
             //QString lang = QLocale::languageToString(QLocale(locale).language());
+            
             QIcon ico(QString(":/"+ locale +".png"));
 
             QAction *action = new QAction(ico, locale, this);
@@ -129,7 +132,7 @@
 
             // switchTranslator(m_translator, QString("%1.qm").arg(rLanguage));
             // switchTranslator(m_translatorQt, QString("%1.qm").arg(rLanguage));
-            //ui.statusBar->showMessage(tr("Current Language changed to %1").arg(languageName));
+            ui->statusBar->showMessage(tr("Current Language changed to %1").arg(rLanguage));
             }
     }
 
@@ -143,12 +146,10 @@
         }
 
         //menuLanguage
-
     }
 
     MainWindow::~MainWindow()
     {        
-        
         delete ui;
     }
 
