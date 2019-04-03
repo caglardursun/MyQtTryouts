@@ -3,10 +3,10 @@
 
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    Miracle::Startup startup;
-    startup.show();
-    
+        QApplication a(argc, argv);
+        Miracle::Startup startup;
 
-    return a.exec();
+        startup.show();
+        
+        return a.exec();
 }

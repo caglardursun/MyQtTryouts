@@ -1,13 +1,12 @@
 #pragma once
 #include <QObject>
-
-
+#include <QApplication>
+#include "View/mainwindow.h"
 namespace Miracle
 {
 
-    class MainWindow;
-    class QApplication;
 
+    class MainViewManager;
     class Startup final : public QObject
     {
         Q_OBJECT
@@ -20,6 +19,7 @@ namespace Miracle
             void loadLanguages() const;            
         private:
             MainWindow& m_MainWindow;
+            MainViewManager* m_mainViewManager;            
     };
 }
 

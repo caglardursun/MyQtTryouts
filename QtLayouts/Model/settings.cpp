@@ -24,8 +24,10 @@ namespace Miracle
     Settings::Settings(QObject * parent, QString filename)
         : QObject (parent),          
         m_fileName(filename),
-        m_applicationName(""),
-        m_appShortName("")                  
+        m_applicationName("Miracle Colorway"),
+        m_appShortName("Colorway"),                
+        m_currentStyle("darkorange"),
+        m_currentLanguage("türkçe")
     {        
     }
 
@@ -89,6 +91,7 @@ namespace Miracle
             }
         }else
         {
+            
             QMessageBox::information(nullptr,tr("Message"),tr("Writing default configuration should be implimented !"));
             //WriteDefaultsToStdConfigFile(std_file, this);
         }

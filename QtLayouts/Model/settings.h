@@ -2,10 +2,12 @@
 
 #include <QWidget>
 #include <QObject>
+#include <QJsonParseError>
+
 
 class QString;
 class QStringListModel;
-class QJsonParseError;
+
 class QJsonObject;
 class QFile;
 class QDir;

@@ -2,6 +2,7 @@
 #include "View/mainwindow.h"
 #include "Model/settings.h"
 #include "Model/provider.h"
+#include "ViewModel/MainViewManager.h"
 #include "utils.h"
 #include <QFile>
 #include <QDir>
@@ -17,11 +18,12 @@ namespace Miracle
     static auto STYLE_PREFIX = QStringLiteral(":/styles");
 
     Startup::Startup() : 
-        QObject(nullptr),        
-        m_MainWindow( *new MainWindow(nullptr) )
+        QObject(nullptr),                
+        m_MainWindow( *new MainWindow(nullptr) ),
+        m_mainViewManager(new MainViewManager(this,Provider::GetSettingsAsSingleton()))
     {		
-        Settings& settings = Provider::GetSettingsAsSingleton();
-        settings.ParseJsonData();        
+        
+        
     }
     //Layout düzenlemeleri burada olacak ayarlara göre startup da 
     //stiller 
@@ -61,20 +63,23 @@ namespace Miracle
     //nasıl olacak düşün ??? 
     void Startup::loadLanguages() const
     {
-        QCoreApplication* app = QCoreApplication::instance();
         
-
-        QTranslator translator;
+        QTranslator translator;        
         
         //get the language from settings ...
-        bool bResult = translator.load("türkçe.qm");
+        Settings& currentSetting = Provider::GetSettingsAsSingleton();
+        QString lang("%1.qm");
+        lang = lang.arg(currentSetting.getCurrentLanguage());
+        bool bResult = translator.load(lang);
         if(!bResult)
         {
            QMessageBox::information(nullptr,tr("Message"),tr("Could not load language file"));
         }
         else
         {
-            app->installTranslator(&translator);
+            //Why it's not working ?
+            m_MainWindow.changeTranslation(translator,lang);
+            
         }
     }
      

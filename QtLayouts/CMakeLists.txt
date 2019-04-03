@@ -19,15 +19,21 @@ set(resource_files "resource.qrc")
 
 #source files ...
 set(project_sources "main.cpp" 
-                    "View/mainwindow.cpp"                     
-                    "startup.cpp"
+                    "View/mainwindow.cpp"   
+                    "View/toolbar.cpp"                                      
                     "Model/provider.cpp"
                     "Model/settings.cpp"
+                    "Model/logger.cpp"
+                    "ViewModel/mainviewmanager.cpp"
+                    "startup.cpp"
                     "utils.cpp")
 #header files ...
 set(project_headers "View/mainwindow.h" 
+                    "View/toolbar.h"
                     "Model/provider.h"                    
-                    "Model/settings.h"                    
+                    "Model/settings.h"
+                    "Model/logger.h" 
+                    "ViewModel/mainviewmanager.h"                   
                     "startup.h"
                     "utils.h")
 
@@ -37,15 +43,36 @@ set(project_dialogs "View/mainwindow.ui")
 #set output location
 #set_source_files_properties(${QM_FILES} PROPERTIES OUTPUT_LOCATION "lang")
 
+
 #add translation files
-qt5_create_translation(QM_FILES ${CMAKE_SOURCE_DIR} "languages/turkish.ts" "languages/english.ts")
+
+set(translation_files "languages/türkçe.ts" "languages/english.ts")
+#set(qm_files "languages/türkçe.qm" "languages/english.qm")
+
+
+
+qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files})
+
+
+add_custom_target(translations DEPENDS ${qm_files})
+#compiled language files will be on the same languages directory
+
+
+#if the compiler is msvc
+if(MSVC)
+    message("*** Microsoft C Compiler running ***")    
+else()
+    message("*** You are working non microsoft compiler ***")
+endif()
+
+
 
 add_executable(${PROJECT_NAME} 
                 ${project_sources} 
                 ${project_headers} 
                 ${project_dialogs}      
                 ${resource_files}      
-                ${QM_FILES}                                   
+                ${qm_files}                                   
                 )
 
 #PUBLIC : dependencies specify that not only does library A use library B internally, it also uses B in
