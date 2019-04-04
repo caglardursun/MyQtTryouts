@@ -136,10 +136,11 @@
     MainWindow::~MainWindow()
     {        
         delete ui;        
-        delete dock;        
-        //listwidget lar da içerisinde olduğundan temizleniyor
+        delete listWidget;
+        delete listWidget2;
+        delete dock;                
         delete dock2;
-        //listwidget lar da içerisinde olduğundan temizleniyor
+        
         
     }
 
