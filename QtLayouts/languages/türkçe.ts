@@ -40,69 +40,74 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="21"/>
+        <location filename="../View/mainwindow.cpp" line="24"/>
         <source>Left</source>
         <translation type="unfinished">Sol</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="27"/>
+        <location filename="../View/mainwindow.cpp" line="29"/>
         <source>L1</source>
         <translation type="unfinished">S1</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="28"/>
+        <location filename="../View/mainwindow.cpp" line="30"/>
         <source>L2</source>
         <translation type="unfinished">S2</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="29"/>
+        <location filename="../View/mainwindow.cpp" line="31"/>
         <source>L3</source>
         <translation type="unfinished">S3</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="30"/>
+        <location filename="../View/mainwindow.cpp" line="32"/>
         <source>L4</source>
         <translation type="unfinished">S4</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="31"/>
+        <location filename="../View/mainwindow.cpp" line="33"/>
         <source>L5</source>
         <translation type="unfinished">S5</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="32"/>
+        <location filename="../View/mainwindow.cpp" line="34"/>
         <source>L6</source>
         <translation type="unfinished">S6</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="37"/>
+        <location filename="../View/mainwindow.cpp" line="39"/>
         <source>Right</source>
         <translation type="unfinished">Sağ</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="40"/>
+        <location filename="../View/mainwindow.cpp" line="42"/>
         <source>R1</source>
         <translation type="unfinished">S1</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="41"/>
+        <location filename="../View/mainwindow.cpp" line="43"/>
         <source>R2</source>
         <translation type="unfinished">S2</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="42"/>
+        <location filename="../View/mainwindow.cpp" line="44"/>
         <source>R3</source>
         <translation type="unfinished">S3</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="43"/>
+        <location filename="../View/mainwindow.cpp" line="45"/>
         <source>R4</source>
         <translation type="unfinished">S4</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="44"/>
+        <location filename="../View/mainwindow.cpp" line="46"/>
         <source>R5</source>
         <translation type="unfinished">S5</translation>
+    </message>
+    <message>
+        <location filename="../View/mainwindow.cpp" line="135"/>
+        <source>Current Language changed to %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -163,43 +168,43 @@
 <context>
     <name>Miracle::Settings</name>
     <message>
-        <location filename="../Model/settings.cpp" line="85"/>
+        <location filename="../Model/settings.cpp" line="86"/>
         <source>Could not open %1</source>
         <translation>%1 açılamıyor</translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="95"/>
+        <location filename="../Model/settings.cpp" line="96"/>
         <source>Message</source>
         <translation>Mesaj</translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="95"/>
+        <location filename="../Model/settings.cpp" line="96"/>
         <source>Writing default configuration should be implimented !</source>
         <translation>Varsayılan konfigürasyon implimente edilmedi</translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="133"/>
+        <location filename="../Model/settings.cpp" line="134"/>
         <source>Could not create configuration directory</source>
         <translation>Konfigürasyon klasörü oluşturulamadı</translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="148"/>
+        <location filename="../Model/settings.cpp" line="149"/>
         <source>Some resource shit happened</source>
         <translation>Resource dosyası klasörü bulunamadı</translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="159"/>
+        <location filename="../Model/settings.cpp" line="160"/>
         <source>Cound not open internal resource %1</source>
         <translation>%1 deki resource yüklenemedi</translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="171"/>
+        <location filename="../Model/settings.cpp" line="172"/>
         <source>Error parsing JSON settings file.
 </source>
         <translation>JSON dosyasında syntax hatası tespit edildi</translation>
     </message>
     <message>
-        <location filename="../Model/settings.cpp" line="173"/>
+        <location filename="../Model/settings.cpp" line="174"/>
         <source>VFP</source>
         <translation>VFP</translation>
     </message>

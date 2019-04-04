@@ -29,6 +29,7 @@ namespace Miracle
         m_currentStyle("darkorange"),
         m_currentLanguage("türkçe")
     {        
+        ParseJsonData();
     }
 
 

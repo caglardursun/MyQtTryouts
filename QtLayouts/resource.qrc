@@ -1,53 +1,52 @@
-<RCC>    
+<RCC>
     <qresource prefix="/">
         <file>images/favicon.ico</file>
         <file>styles/darkorange.qss</file>
-        <file>styles/darkblue.qss</file>        
+        <file>styles/darkblue.qss</file>
         <file>images/english.png</file>
         <file>images/turkce.png</file>
-        <file>images/dark/darkbranch_closed-on.svg</file>
-        <file>images/dark/darkbranch_closed.svg</file>
-        <file>images/dark/darkbranch_open-on.svg</file>
-        <file>images/dark/darkbranch_open.svg</file>
-        <file>images/dark/darkcheckbox_checked.svg</file>
-        <file>images/dark/darkcheckbox_checked_disabled.svg</file>
-        <file>images/dark/darkcheckbox_indeterminate.svg</file>
-        <file>images/dark/darkcheckbox_indeterminate_disabled.svg</file>
-        <file>images/dark/darkcheckbox_unchecked.svg</file>
-        <file>images/dark/darkcheckbox_unchecked_disabled.svg</file>
-        <file>images/dark/darkclose-hover.svg</file>
-        <file>images/dark/darkclose-pressed.svg</file>
-        <file>images/dark/darkclose.svg</file>
-        <file>images/dark/darkdown_arrow-hover.svg</file>
-        <file>images/dark/darkdown_arrow.svg</file>
-        <file>images/dark/darkdown_arrow_disabled.svg</file>
-        <file>images/dark/darkhmovetoolbar.svg</file>
-        <file>images/dark/darkhsepartoolbar.svg</file>
-        <file>images/dark/darkleft_arrow.svg</file>
-        <file>images/dark/darkleft_arrow_disabled.svg</file>
-        <file>images/dark/darklist.py</file>
-        <file>images/dark/darkradio_checked.svg</file>
-        <file>images/dark/darkradio_checked_disabled.svg</file>
-        <file>images/dark/darkradio_unchecked.svg</file>
-        <file>images/dark/darkradio_unchecked_disabled.svg</file>
-        <file>images/dark/darkright_arrow.svg</file>
-        <file>images/dark/darkright_arrow_disabled.svg</file>
-        <file>images/dark/darksizegrip.svg</file>
-        <file>images/dark/darkspinup_disabled.svg</file>
-        <file>images/dark/darkstylesheet-branch-end-closed.svg</file>
-        <file>images/dark/darkstylesheet-branch-end-open.svg</file>
-        <file>images/dark/darkstylesheet-branch-end.svg</file>
-        <file>images/dark/darkstylesheet-branch-more.svg</file>
-        <file>images/dark/darkstylesheet-vline.svg</file>
-        <file>images/dark/darktransparent.svg</file>
-        <file>images/dark/darkundock-hover.svg</file>
-        <file>images/dark/darkundock.svg</file>
-        <file>images/dark/darkup_arrow-hover.svg</file>
-        <file>images/dark/darkup_arrow.svg</file>
-        <file>images/dark/darkup_arrow_disabled.svg</file>
-        <file>images/dark/darkvmovetoolbar.svg</file>
-        <file>images/dark/darkvsepartoolbars.svg</file>
-    </qresource>dark/
+        <file>images/dark/branch_closed.svg</file>
+        <file>images/dark/branch_closed-on.svg</file>
+        <file>images/dark/branch_open.svg</file>
+        <file>images/dark/branch_open-on.svg</file>
+        <file>images/dark/checkbox_checked.svg</file>
+        <file>images/dark/checkbox_checked_disabled.svg</file>
+        <file>images/dark/checkbox_indeterminate.svg</file>
+        <file>images/dark/checkbox_indeterminate_disabled.svg</file>
+        <file>images/dark/checkbox_unchecked.svg</file>
+        <file>images/dark/checkbox_unchecked_disabled.svg</file>
+        <file>images/dark/close.svg</file>
+        <file>images/dark/close-hover.svg</file>
+        <file>images/dark/close-pressed.svg</file>
+        <file>images/dark/down_arrow.svg</file>
+        <file>images/dark/down_arrow_disabled.svg</file>
+        <file>images/dark/down_arrow-hover.svg</file>
+        <file>images/dark/hmovetoolbar.svg</file>
+        <file>images/dark/hsepartoolbar.svg</file>
+        <file>images/dark/left_arrow.svg</file>
+        <file>images/dark/left_arrow_disabled.svg</file>
+        <file>images/dark/radio_checked.svg</file>
+        <file>images/dark/radio_checked_disabled.svg</file>
+        <file>images/dark/radio_unchecked.svg</file>
+        <file>images/dark/radio_unchecked_disabled.svg</file>
+        <file>images/dark/right_arrow.svg</file>
+        <file>images/dark/right_arrow_disabled.svg</file>
+        <file>images/dark/sizegrip.svg</file>
+        <file>images/dark/spinup_disabled.svg</file>
+        <file>images/dark/stylesheet-branch-end.svg</file>
+        <file>images/dark/stylesheet-branch-end-closed.svg</file>
+        <file>images/dark/stylesheet-branch-end-open.svg</file>
+        <file>images/dark/stylesheet-branch-more.svg</file>
+        <file>images/dark/stylesheet-vline.svg</file>
+        <file>images/dark/transparent.svg</file>
+        <file>images/dark/undock.svg</file>
+        <file>images/dark/undock-hover.svg</file>
+        <file>images/dark/up_arrow.svg</file>
+        <file>images/dark/up_arrow_disabled.svg</file>
+        <file>images/dark/up_arrow-hover.svg</file>
+        <file>images/dark/vmovetoolbar.svg</file>
+        <file>images/dark/vsepartoolbars.svg</file>
+    </qresource>
     <qresource prefix="/json">
         <file>settings.json</file>
     </qresource>
