@@ -10,10 +10,10 @@
     [ ] MainVindow dock sistemi şu anda tab kontrollerini üretebilecek durumda değil. Bunun üzerine çalışılmalı
 
 ### Still
-    [ ] Stiller için Icon setleri bulunup resource içine atılmalı
+    [x] Stiller için Icon setleri bulunup resource içine atılmalı
     
 ### Menu
-    [ ] Icon setleri bulunup resource içine atılmalı
+    [x] Icon setleri bulunup resource içine atılmalı
     [ ] Menü listen yok, tamamla
 
 ### Lua Entegrasyonu 
