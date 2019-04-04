@@ -103,7 +103,7 @@
 
             QString lang = QLocale::languageToString(QLocale(locale).language());
             
-            QIcon ico(QString(":/"+ locale +".png"));
+            QIcon ico(QString(":/images/"+ locale +".png"));
 
             QAction *action = new QAction(ico, lang, this);
             action->setCheckable(true);

@@ -48,10 +48,17 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="action_New"/>
+   <addaction name="actionSave"/>
    <addaction name="actionClose"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="action_New">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/new.png</normalon>
+    </iconset>
+   </property>
    <property name="text">
     <string>&amp;New</string>
    </property>
@@ -67,12 +74,19 @@
    </property>
   </action>
   <action name="actionSave">
+   <property name="icon">
+    <iconset resource="../resource.qrc">
+     <normaloff>:/images/save.png</normaloff>
+     <normalon>:/images/new.png</normalon>:/images/save.png</iconset>
+   </property>
    <property name="text">
     <string>&amp;Save</string>
    </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="../resource.qrc"/>
+ </resources>
  <connections/>
 </ui>
