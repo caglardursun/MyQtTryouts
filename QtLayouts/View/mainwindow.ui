@@ -29,7 +29,9 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="menuAction"/>
+    <addaction name="action_New"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionClose"/>
    </widget>
    <widget class="QMenu" name="menuLanguage">
     <property name="title">
@@ -46,11 +48,27 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionClose"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="menuAction">
+  <action name="action_New">
    <property name="text">
     <string>&amp;New</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="icon">
+    <iconset>
+     <normalon>:/images/dark/close-pressed.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>&amp;Save</string>
    </property>
   </action>
  </widget>

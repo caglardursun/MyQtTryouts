@@ -20,7 +20,7 @@ set(resource_files "resource.qrc")
 #source files ...
 set(project_sources "main.cpp" 
                     "View/mainwindow.cpp"   
-                    "View/toolbar.cpp"                                      
+                    "View/basewindow.cpp"                                      
                     "Model/provider.cpp"
                     "Model/settings.cpp"
                     "Model/logger.cpp"
@@ -29,7 +29,7 @@ set(project_sources "main.cpp"
                     "utils.cpp")
 #header files ...
 set(project_headers "View/mainwindow.h" 
-                    "View/toolbar.h"
+                    "View/basewindow.h"
                     "Model/provider.h"                    
                     "Model/settings.h"
                     "Model/logger.h" 

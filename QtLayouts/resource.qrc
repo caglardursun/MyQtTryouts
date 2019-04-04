@@ -46,6 +46,9 @@
         <file>images/dark/up_arrow-hover.svg</file>
         <file>images/dark/vmovetoolbar.svg</file>
         <file>images/dark/vsepartoolbars.svg</file>
+        <file>images/new.png</file>
+        <file>images/open.png</file>
+        <file>images/save.png</file>
     </qresource>
     <qresource prefix="/json">
         <file>settings.json</file>

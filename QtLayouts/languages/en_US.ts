@@ -5,27 +5,39 @@
     <name>MainWindow</name>
     <message>
         <location filename="../View/mainwindow.ui" line="14"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="77"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="89"/>
         <source>MainWindow</source>
         <translation>Main Window</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="30"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="79"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="93"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="36"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="80"/>
+        <location filename="../View/mainwindow.ui" line="38"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="94"/>
         <source>&amp;Language</source>
         <translation>&amp;Language</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="53"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="78"/>
+        <location filename="../View/mainwindow.ui" line="56"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="90"/>
         <source>&amp;New</source>
         <translation>&amp;New</translation>
+    </message>
+    <message>
+        <location filename="../View/mainwindow.ui" line="66"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="91"/>
+        <source>Exit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../View/mainwindow.ui" line="71"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="92"/>
+        <source>&amp;Save</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Türkçe</source>
@@ -36,73 +48,68 @@
         <translation type="vanished">English</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="24"/>
+        <location filename="../View/mainwindow.cpp" line="29"/>
         <source>Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="29"/>
+        <location filename="../View/mainwindow.cpp" line="34"/>
         <source>L1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="30"/>
+        <location filename="../View/mainwindow.cpp" line="35"/>
         <source>L2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="31"/>
+        <location filename="../View/mainwindow.cpp" line="36"/>
         <source>L3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="32"/>
+        <location filename="../View/mainwindow.cpp" line="37"/>
         <source>L4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="33"/>
+        <location filename="../View/mainwindow.cpp" line="38"/>
         <source>L5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="34"/>
+        <location filename="../View/mainwindow.cpp" line="39"/>
         <source>L6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="39"/>
+        <location filename="../View/mainwindow.cpp" line="44"/>
         <source>Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="42"/>
+        <location filename="../View/mainwindow.cpp" line="47"/>
         <source>R1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="43"/>
+        <location filename="../View/mainwindow.cpp" line="48"/>
         <source>R2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="44"/>
+        <location filename="../View/mainwindow.cpp" line="49"/>
         <source>R3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="45"/>
+        <location filename="../View/mainwindow.cpp" line="50"/>
         <source>R4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="46"/>
+        <location filename="../View/mainwindow.cpp" line="51"/>
         <source>R5</source>
-        <translation></translation>
-    </message>
-    <message>
-        <location filename="../View/mainwindow.cpp" line="130"/>
-        <source>Current Language changed to %1</source>
         <translation></translation>
     </message>
 </context>
