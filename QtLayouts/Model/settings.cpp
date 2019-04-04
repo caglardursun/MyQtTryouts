@@ -27,7 +27,7 @@ namespace Miracle
         m_applicationName("Miracle Colorway"),
         m_appShortName("Colorway"),                
         m_currentStyle("darkorange"),
-        m_currentLanguage("türkçe")
+        m_currentLanguage("tr_TR")
     {        
         ParseJsonData();
     }

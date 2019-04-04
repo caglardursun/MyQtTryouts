@@ -29,7 +29,7 @@
     <property name="title">
      <string>&amp;File</string>
     </property>
-    <addaction name="action_New"/>
+    <addaction name="menuAction"/>
    </widget>
    <widget class="QMenu" name="menuLanguage">
     <property name="title">
@@ -48,19 +48,9 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
-  <action name="action_New">
+  <action name="menuAction">
    <property name="text">
     <string>&amp;New</string>
-   </property>
-  </action>
-  <action name="actionT_rk_e">
-   <property name="text">
-    <string>Türkçe</string>
-   </property>
-  </action>
-  <action name="actionEnglish">
-   <property name="text">
-    <string>English</string>
    </property>
   </action>
  </widget>

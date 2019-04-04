@@ -2,10 +2,10 @@
     "applicationName":"Miracle Colorway",
     "applicationTitle":"Miracle Colorway",  
     "applicationShortName":"Colorway",
-    "currentLanguage" : "türkçe",
+    "currentLanguage" : "tr_TR",
     "suportedLanguages" : [
-      "türkçe",
-      "english"
+      "tr_TR",
+      "en_US"
     ],
     "currentStyle":"darkblue",    
     "supportedStyles": [

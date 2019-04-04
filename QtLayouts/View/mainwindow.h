@@ -34,6 +34,7 @@ class MainWindow : public QMainWindow
 
             QTranslator m_translator; // contains the translations for this application
             QTranslator m_translatorQt; // contains the translations for qt
+            
             QString m_langPath;
             QString m_currLang; // contains the currently loaded language
 

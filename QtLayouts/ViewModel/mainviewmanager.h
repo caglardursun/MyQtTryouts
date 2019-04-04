@@ -9,7 +9,7 @@ namespace Miracle
     
     class MainViewManager : public QObject
     {
-        Q_OBJECT;
+        Q_OBJECT
 
         private:
             Settings& m_Settings;

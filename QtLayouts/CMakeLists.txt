@@ -46,7 +46,7 @@ set(project_dialogs "View/mainwindow.ui")
 
 #add translation files
 
-set(translation_files "languages/türkçe.ts" "languages/english.ts")
+set(translation_files "languages/tr_TR.ts" "languages/en_US.ts")
 #set(qm_files "languages/türkçe.qm" "languages/english.qm")
 
 
