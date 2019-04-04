@@ -65,8 +65,8 @@
             break;
              case QEvent::LocaleChange:
             {
-                QString locale = Provider::GetSettingsAsSingleton().getCurrentLanguage();                
-                loadLanguage(locale);
+                
+                loadLanguage(m_Settings.getCurrentLanguage());
             }         
           }//end of switch
 
