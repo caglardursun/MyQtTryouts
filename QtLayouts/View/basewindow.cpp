@@ -1,7 +1,8 @@
 #include "basewindow.h"
 #include <QApplication>
 
-BaseWindow::BaseWindow()    
+BaseWindow::BaseWindow():
+    m_Settings(Provider::GetSettingsAsSingleton())    
 {
     
 }

@@ -27,11 +27,17 @@ class MainWindow : public QMainWindow, public BaseWindow
             Ui::MainWindow *ui;
             void Init();
             void createLanguageMenu();            
-            void createDock();            
+            void createDock();        
+        private:
+            QDockWidget* dock;    
+            QDockWidget* dock2;
+
+            QListWidget* listWidget;
+            QListWidget* listWidget2;
 
         protected:            
             void changeEvent(QEvent*);
-            Settings& m_Settings;
+            // Settings& m_Settings;
 
         protected slots:            
             void slotLanguageChanged(QAction* action);            

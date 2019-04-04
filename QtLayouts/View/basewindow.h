@@ -2,14 +2,19 @@
 #include <QObject>
 #include <QWidget>
 #include <QTranslator>
+#include "Model/settings.h"
+#include "Model/logger.h"
+#include "Model/provider.h"
 
-class BaseWindow
+using namespace Miracle;
+
+class BaseWindow 
 {    
-
+    
     public:
         
     protected:
-        
+        Settings& m_Settings;
         QTranslator m_translator; // contains the translations for this application
         QTranslator m_translatorQt; // contains the translations for qt
         QString m_langPath;

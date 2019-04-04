@@ -48,67 +48,67 @@
         <translation type="vanished">English</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="29"/>
+        <location filename="../View/mainwindow.cpp" line="25"/>
         <source>Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="34"/>
+        <location filename="../View/mainwindow.cpp" line="30"/>
         <source>L1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="35"/>
+        <location filename="../View/mainwindow.cpp" line="31"/>
         <source>L2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="36"/>
+        <location filename="../View/mainwindow.cpp" line="32"/>
         <source>L3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="37"/>
+        <location filename="../View/mainwindow.cpp" line="33"/>
         <source>L4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="38"/>
+        <location filename="../View/mainwindow.cpp" line="34"/>
         <source>L5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="39"/>
+        <location filename="../View/mainwindow.cpp" line="35"/>
         <source>L6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="44"/>
+        <location filename="../View/mainwindow.cpp" line="40"/>
         <source>Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="47"/>
+        <location filename="../View/mainwindow.cpp" line="43"/>
         <source>R1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="48"/>
+        <location filename="../View/mainwindow.cpp" line="44"/>
         <source>R2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="49"/>
+        <location filename="../View/mainwindow.cpp" line="45"/>
         <source>R3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="50"/>
+        <location filename="../View/mainwindow.cpp" line="46"/>
         <source>R4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="51"/>
+        <location filename="../View/mainwindow.cpp" line="47"/>
         <source>R5</source>
         <translation></translation>
     </message>

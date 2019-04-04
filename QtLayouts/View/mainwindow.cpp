@@ -3,9 +3,7 @@
 #include <QIcon>
 
     MainWindow::MainWindow(QWidget *parent) :
-        QMainWindow(parent),        
-        BaseWindow(),       
-        m_Settings(Provider::GetSettingsAsSingleton()),
+        QMainWindow(parent),                       
         ui(new Ui::MainWindow)               
     {
         ui->setupUi(this);
@@ -24,31 +22,31 @@
 
     void MainWindow::createDock()
     {
-         auto dock = new QDockWidget(tr("Left"), this);
+        dock= new QDockWidget(tr("Left"), this);
         dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea | Qt::BottomDockWidgetArea); 
-        QListWidget& listWidget(*new QListWidget(dock));
+        listWidget= new QListWidget(dock);
         
-        listWidget.addItems(QStringList()
+        listWidget->addItems(QStringList()
             << tr("L1")
             << tr("L2")
             << tr("L3")
             << tr("L4")
             << tr("L5")
             << tr("L6"));
+
         //Allow left right and bottom
-        dock->setWidget(&listWidget);
+        dock->setWidget(listWidget);
 
-
-        auto dock2 = new QDockWidget(tr("Right"), this);
-        auto list2 = new QListWidget(dock2);
-        list2->addItems(QStringList()
+        dock2=new QDockWidget(tr("Right"), this);
+        listWidget2 = new QListWidget(dock2);
+        listWidget2->addItems(QStringList()
             << tr("R1")
             << tr("R2")
             << tr("R3")
             << tr("R4")
             << tr("R5")
             );
-        dock2->setWidget(list2);
+        dock2->setWidget(listWidget2);
         
         addDockWidget(Qt::LeftDockWidgetArea, dock);        
         addDockWidget(Qt::RightDockWidgetArea, dock2); 
@@ -69,13 +67,9 @@
             {
                 QString locale = Provider::GetSettingsAsSingleton().getCurrentLanguage();                
                 loadLanguage(locale);
-            }
-            case QEvent::Polish:
-            {
-                ui->retranslateUi(this);
-                break;
-            }
-          }
+            }         
+          }//end of switch
+
          }
 
         QMainWindow::changeEvent(event);
@@ -141,7 +135,12 @@
 
     MainWindow::~MainWindow()
     {        
-        delete ui;
+        delete ui;        
+        delete dock;        
+        //listwidget lar da içerisinde olduğundan temizleniyor
+        delete dock2;
+        //listwidget lar da içerisinde olduğundan temizleniyor
+        
     }
 
     void MainWindow::on_actionClose_triggered()
