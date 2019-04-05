@@ -8,7 +8,6 @@ int main(int argc, char *argv[])
         //Exit implimentation
         QObject::connect(&a, &QApplication::lastWindowClosed, &a, &QApplication::quit);
 
-
         startup.show();
         
         return a.exec();

@@ -55,7 +55,7 @@
     void MainWindow::changeEvent(QEvent* event)
     {
 
-         if(0 != event) {
+         if(nullptr != event) {
           switch(event->type()) {
             // this event is send if a translator is loaded
             case QEvent::LanguageChange:
@@ -123,7 +123,7 @@
 
     void MainWindow::slotLanguageChanged(QAction* action)
     {
-        if(0 != action) 
+        if(nullptr != action)
         {
             // load the language dependant on the action content
             loadLanguage(action->data().toString());
@@ -144,7 +144,9 @@
         
     }
 
-    void MainWindow::on_actionClose_triggered()
-    {
-        QApplication::quit();
-    }
+
+
+void MainWindow::on_actionClose_triggered()
+{
+     QApplication::quit();
+}

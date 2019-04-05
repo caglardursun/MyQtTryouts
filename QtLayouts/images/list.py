@@ -1,4 +1,4 @@
 import os
 
-for i in os.listdir("./"):
-    print("<file>images/dark"+ i +"</file>")
+for i in os.listdir("dark/"):
+    print("<file>images/dark/"+ i +"</file>")

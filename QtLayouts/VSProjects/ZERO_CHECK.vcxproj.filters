@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\cagla\Documents\QtProjects\MyQtTryouts\QtLayouts\VSProjects\CMakeFiles\c62800e37283d4801d9850b8c5d094cf\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{6BF9A00D-DA03-3159-A89D-344783790256}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

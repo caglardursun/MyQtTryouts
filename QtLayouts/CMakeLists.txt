@@ -17,6 +17,9 @@ find_package(Qt5 REQUIRED Core Widgets Gui LinguistTools)
 
 set(resource_files "resource.qrc")
 
+
+
+
 #source files ...
 set(project_sources "main.cpp" 
                     "View/mainwindow.cpp"   
