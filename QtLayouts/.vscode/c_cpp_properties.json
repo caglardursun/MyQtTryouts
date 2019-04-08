@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/build",                
+                "${workspaceFolder}/build",
                 "${workspaceFolder}/build/MiracleLayout_autogen/include",
                 "/opt/Qt/5.12.1/gcc_64/include",
                 "/opt/Qt/5.12.1/gcc_64/include/QtCore",
@@ -16,19 +16,20 @@
             "compilerPath": "/usr/bin/clang",
             "cStandard": "c11",
             "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64"
+            "intelliSenseMode": "clang-x64",
+            "configurationProvider": "vector-of-bool.cmake-tools"
         },
         {
             "name": "Win",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\\\Qt\\\\Qt5.12.1\\\\5.12.1\\\\msvc2017_64\\\\include",
-                "C:\\\\Qt\\\\Qt5.12.1\\\\5.12.1\\\\msvc2017_64\\\\include\\\\QtCore",
-                "C:\\\\Qt\\\\Qt5.12.1\\\\5.12.1\\\\msvc2017_64\\\\.\\\\mkspecs\\\\win32-msvc",
-                "C:\\\\Qt\\\\Qt5.12.1\\\\5.12.1\\\\msvc2017_64\\\\include\\\\QtWidgets",
-                "C:\\\\Qt\\\\Qt5.12.1\\\\5.12.1\\\\msvc2017_64\\\\include\\\\QtGui",
-                "C:\\\\Qt\\\\Qt5.12.1\\\\5.12.1\\\\msvc2017_64\\\\include\\\\QtANGLE",
-                "C:\\\\Qt\\\\Qt5.12.1\\\\5.12.1\\\\msvc2017_64\\\\include\\\\QtNetwork"
+                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include",
+                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtCore",
+                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\.\\\\\\\\mkspecs\\\\\\\\win32-msvc",
+                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtWidgets",
+                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtGui",
+                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtANGLE",
+                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtNetwork"
             ],
             "defines": [
                 "_DEBUG",
