@@ -14,21 +14,19 @@
 //     class MainViewer;
 // }
 
-class MainViewer : public QWidget
+class MainViewer : public QWidget, public BaseWindow
 {
     Q_OBJECT
 
 public:
-    explicit MainViewer(QWidget *parent = 0);
+    explicit MainViewer(QWidget *parent,QString& filePath);
     ~MainViewer();
-    void Load(QString& str);
+    
 
 private:
-    // Ui::MainViewer *ui;
-    //QString& m_filePath;
         
     void SetRenderFocus(QRect rect);
-
+    QString& m_filePath;
 
 protected:
     void keyPressEvent(QKeyEvent* event);

@@ -188,8 +188,8 @@ void MainWindow::on_action_New_triggered()
     for(int i = 0; i < files.count(); i++)
     {
         QFileInfo fi(files[0]);        
-        MainViewer* mv = new MainViewer(this);
-        mv->Load(files[i]);
+        MainViewer* mv = new MainViewer(this,files[i]);
+        
         tabWidget->addTab(mv,fi.fileName());
         tabWidget->setCurrentIndex(tabWidget->count()-1);
     }    

@@ -1,11 +1,18 @@
 #include "View/mainviewer.h"
 
 
-MainViewer::MainViewer(QWidget *parent) :
-    QWidget(parent)    
+MainViewer::MainViewer(QWidget *parent, QString& filePath) :
+    QWidget(parent),
+    m_filePath(filePath)    
 {
     // ui->setupUi(this);        
-    // Load();
+    //Load();
+    m_CachedImage.load(m_filePath);
+
+    if(m_CachedImage.width() > m_CachedImage.height())
+        m_aspectRatio = m_CachedImage.width() / m_CachedImage.height();
+    if(m_CachedImage.height() > m_CachedImage.width())
+        m_aspectRatio = m_CachedImage.height() / m_CachedImage.width();
 }
 
 MainViewer::~MainViewer()
@@ -14,17 +21,6 @@ MainViewer::~MainViewer()
 }
 
 
-void MainViewer::Load(QString& str)
-{
-
-    m_CachedImage.load(str);
-
-    if(m_CachedImage.width() > m_CachedImage.height())
-        m_aspectRatio = m_CachedImage.width() / m_CachedImage.height();
-    if(m_CachedImage.height() > m_CachedImage.width())
-        m_aspectRatio = m_CachedImage.height() / m_CachedImage.width();
-
-}
 
 
 void MainViewer::SetRenderFocus(QRect rect)
