@@ -5,7 +5,6 @@
     <name>MainViewer</name>
     <message>
         <location filename="../View/mainviewer.ui" line="14"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainviewer.h" line="53"/>
         <source>Form</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14,37 +13,37 @@
     <name>MainWindow</name>
     <message>
         <location filename="../View/mainwindow.ui" line="14"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="98"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="97"/>
         <source>MainWindow</source>
         <translation>Main Window</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="30"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="102"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="101"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="38"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="103"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="102"/>
         <source>&amp;Language</source>
         <translation>&amp;Language</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="63"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="99"/>
+        <location filename="../View/mainwindow.ui" line="62"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="98"/>
         <source>&amp;New</source>
         <translation>&amp;New</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="73"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="100"/>
+        <location filename="../View/mainwindow.ui" line="72"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="99"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="83"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="101"/>
+        <location filename="../View/mainwindow.ui" line="82"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="100"/>
         <source>&amp;Save</source>
         <translation type="unfinished"></translation>
     </message>

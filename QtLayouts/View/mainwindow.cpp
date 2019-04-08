@@ -23,14 +23,16 @@
 
     void MainWindow::slotCloseTab(int index)
     {
+        //Eğer widget index i sıfır ise hepsi gidiyor
         tabWidget->removeTab(index);
-        delete tabWidget->widget(index);
+        QWidget* pwidget = tabWidget->widget(index);
+        delete pwidget;
     }
 
     void MainWindow::Init()
     {              
         //Load language from settings        
-        loadLanguage(m_Settings.getCurrentLanguage());
+        
         createDock();            
         createLanguageMenu();  
         // m_mainTabList = new QList<MainTab*>();
@@ -189,5 +191,6 @@ void MainWindow::on_action_New_triggered()
         MainViewer* mv = new MainViewer(this);
         mv->Load(files[i]);
         tabWidget->addTab(mv,fi.fileName());
+        tabWidget->setCurrentIndex(tabWidget->count()-1);
     }    
 }

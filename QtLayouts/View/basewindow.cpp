@@ -4,7 +4,7 @@
 BaseWindow::BaseWindow():
     m_Settings(Provider::GetSettingsAsSingleton())    
 {
-    
+    loadLanguage(m_Settings.getCurrentLanguage());
 }
 
 BaseWindow::~BaseWindow()
