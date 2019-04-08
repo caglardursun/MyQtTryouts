@@ -7,8 +7,9 @@
       "tr_TR",
       "en_US"
     ],
-    "currentStyle":"darkblue",    
+    "currentStyle":"default",    
     "supportedStyles": [
+      "default",
       "darkorange",
       "darkblue"      
     ]

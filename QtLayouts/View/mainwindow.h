@@ -7,13 +7,12 @@
 #include "Model/provider.h"
 #include "Model/settings.h"
 #include "View/basewindow.h"
-#include "maintab.h"
 
 using namespace Miracle;
 
 namespace Ui 
 {
-    class MainWindow;
+    class MainWindow;    
 }
 
 
@@ -40,7 +39,7 @@ class MainWindow : public QMainWindow, public BaseWindow
 
         protected:            
             void changeEvent(QEvent*);
-            TabDialog* m_pTabDlg;
+            QTabWidget *tabWidget;
 
         protected slots:            
             void slotLanguageChanged(QAction* action);            

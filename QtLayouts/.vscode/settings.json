@@ -63,5 +63,5 @@
         "qobject": "cpp",
         "qapplication": "cpp"
     },
-    "C_Cpp.errorSquiggles": "Enabled"
+    "C_Cpp.errorSquiggles": "Disabled"
 }

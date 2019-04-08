@@ -47,6 +47,10 @@ namespace Miracle
             }
             //dark orrange qss
             Settings& currentSetting = Provider::GetSettingsAsSingleton();
+
+            if(currentSetting.getCurrentStyle() == "default")
+                return;
+
             QString fileName("%1.qss");
             fileName = fileName.arg(currentSetting.getCurrentStyle());
             

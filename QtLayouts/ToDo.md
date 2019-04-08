@@ -8,7 +8,7 @@
     [ ] ViewModel içerisinde viewmanager lar yazılmalı
 
 ### View
-    [ ] MainVindow dock sistemi şu anda tab kontrollerini üretebilecek durumda değil. Bunun üzerine çalışılmalı
+    [x] MainVindow dock sistemi şu anda tab kontrollerini üretebilecek durumda değil. Bunun üzerine çalışılmalı
     [ ] Dock için template widget dan anlık olarak viewer üretecek yapı gerekli ...
 
 ### Still

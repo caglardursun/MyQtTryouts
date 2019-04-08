@@ -15,31 +15,38 @@ find_package(Qt5 REQUIRED Core Widgets Gui LinguistTools)
 #add directories to seee what's inside
 #include_directories("View" "Model")
 
+#I'm sick and tired to add these line everythime I try to add a class or 
+#dialog file into the project. I'm too lazy 4 this
+
+file(GLOB project_sources "*.cpp" "View/*.cpp" "Model/*.cpp"  "ViewModel/*.cpp")
+file(GLOB project_headers "*.h" "View/*.h" "Model/*.h"  "ViewModel/*.h")
+file(GLOB project_dialogs "View/*.ui")
+
 set(resource_files "resource.qrc")
 
 #source files ...
-set(project_sources "main.cpp" 
-                    "View/mainwindow.cpp"   
-                    "View/basewindow.cpp"                                      
-                    "View/maintab.cpp"                                      
-                    "Model/provider.cpp"
-                    "Model/settings.cpp"
-                    "Model/logger.cpp"
-                    "ViewModel/mainviewmanager.cpp"
-                    "startup.cpp"
-                    "utils.cpp")
+# set(project_sources "main.cpp" 
+#                     "View/mainwindow.cpp"   
+#                     "View/basewindow.cpp"                                                                                             
+#                     "Model/provider.cpp"
+#                     "Model/settings.cpp"
+#                     "Model/logger.cpp"
+#                     "ViewModel/mainviewmanager.cpp"
+#                     "View/mainviewer.cpp"                   
+#                     "startup.cpp"
+#                     "utils.cpp")
 #header files ...
-set(project_headers "View/mainwindow.h" 
-                    "View/basewindow.h"
-                    "View/maintab.h"                                      
-                    "Model/provider.h"                    
-                    "Model/settings.h"
-                    "Model/logger.h" 
-                    "ViewModel/mainviewmanager.h"                   
-                    "startup.h"
-                    "utils.h")
+# set(project_headers "View/mainwindow.h" 
+#                     "View/basewindow.h"                                                       
+#                     "Model/provider.h"                    
+#                     "Model/settings.h"
+#                     "Model/logger.h" 
+#                     "ViewModel/mainviewmanager.h"                   
+#                     "View/mainviewer.h"                   
+#                     "startup.h"
+#                     "utils.h")
 
-set(project_dialogs "View/mainwindow.ui")
+# set(project_dialogs "View/mainwindow.ui" "View/mainviewer.ui")
 
 
 #set output location

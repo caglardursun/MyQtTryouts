@@ -1,12 +1,17 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "maintab.h"
+#include "ui_mainviewer.h"
 #include <QIcon>
+#include "mainviewer.h"
 
     MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),                       
         ui(new Ui::MainWindow)               
     {
+        tabWidget = new QTabWidget;
+        tabWidget->addTab(new MainViewer(this),tr("caption"));
+        tabWidget->addTab(new MainViewer(this),tr("caption 2"));
+        
         ui->setupUi(this);
         Init();               
     }
@@ -29,8 +34,7 @@
         // m_mainTab = new MainTab(this);
         // setCentralWidget(m_mainTab);
 
-        m_pTabDlg = new TabDialog(QString("../utils.h"),this);
-        setCentralWidget(m_pTabDlg);
+        setCentralWidget(tabWidget);
 
 
         m_dock= new QDockWidget(tr("Left"), this);
@@ -146,8 +150,7 @@
 
     MainWindow::~MainWindow()
     {        
-        delete ui;        
-        delete m_pTabDlg;
+        delete ui;                
         delete m_listWidget;
         delete m_listWidget2;
         delete m_dock;                
