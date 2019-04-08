@@ -3,9 +3,11 @@
 #include <QMainWindow>
 #include <QtWidgets>
 #include <QTranslator>
+#include <QTabBar>
 #include "Model/provider.h"
 #include "Model/settings.h"
 #include "View/basewindow.h"
+#include "maintab.h"
 
 using namespace Miracle;
 
@@ -29,15 +31,16 @@ class MainWindow : public QMainWindow, public BaseWindow
             void createLanguageMenu();            
             void createDock();        
         private:
-            QDockWidget* dock;    
-            QDockWidget* dock2;
+            QDockWidget* m_dock;    
+            QDockWidget* m_dock2;
+            //QDockWidget* m_mainDock;
 
-            QListWidget* listWidget;
-            QListWidget* listWidget2;
+            QListWidget* m_listWidget;
+            QListWidget* m_listWidget2;                        
 
         protected:            
             void changeEvent(QEvent*);
-            // Settings& m_Settings;
+            TabDialog* m_pTabDlg;
 
         protected slots:            
             void slotLanguageChanged(QAction* action);            

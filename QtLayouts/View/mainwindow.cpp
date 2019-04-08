@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "maintab.h"
 #include <QIcon>
 
     MainWindow::MainWindow(QWidget *parent) :
@@ -15,18 +16,28 @@
         //Load language from settings        
         loadLanguage(m_Settings.getCurrentLanguage());
         createDock();            
-        createLanguageMenu();    
+        createLanguageMenu();  
+        // m_mainTabList = new QList<MainTab*>();
+        
+
+        //setCentralWidget();
     }
 
-    
-
+        
     void MainWindow::createDock()
     {
-        dock= new QDockWidget(tr("Left"), this);
-        dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea | Qt::BottomDockWidgetArea); 
-        listWidget= new QListWidget(dock);
+        // m_mainTab = new MainTab(this);
+        // setCentralWidget(m_mainTab);
+
+        m_pTabDlg = new TabDialog(QString("../utils.h"),this);
+        setCentralWidget(m_pTabDlg);
+
+
+        m_dock= new QDockWidget(tr("Left"), this);
+        m_dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea ); 
+        m_listWidget= new QListWidget(m_dock);
         
-        listWidget->addItems(QStringList()
+        m_listWidget->addItems(QStringList()
             << tr("L1")
             << tr("L2")
             << tr("L3")
@@ -35,21 +46,23 @@
             << tr("L6"));
 
         //Allow left right and bottom
-        dock->setWidget(listWidget);
+        m_dock->setWidget(m_listWidget);
 
-        dock2=new QDockWidget(tr("Right"), this);
-        listWidget2 = new QListWidget(dock2);
-        listWidget2->addItems(QStringList()
+        m_dock2=new QDockWidget(tr("Right"), this);
+        m_dock2->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea ); 
+        m_listWidget2 = new QListWidget(m_dock2);
+        m_listWidget2->addItems(QStringList()
             << tr("R1")
             << tr("R2")
             << tr("R3")
             << tr("R4")
             << tr("R5")
             );
-        dock2->setWidget(listWidget2);
+        m_dock2->setWidget(m_listWidget2);
         
-        addDockWidget(Qt::LeftDockWidgetArea, dock);        
-        addDockWidget(Qt::RightDockWidgetArea, dock2); 
+        addDockWidget(Qt::LeftDockWidgetArea, m_dock);        
+        addDockWidget(Qt::RightDockWidgetArea, m_dock2); 
+
     }
 
     void MainWindow::changeEvent(QEvent* event)
@@ -128,20 +141,17 @@
             // load the language dependant on the action content
             loadLanguage(action->data().toString());
             setWindowIcon(action->icon());
-        }
-
-        //menuLanguage
+        }        
     }
 
     MainWindow::~MainWindow()
     {        
         delete ui;        
-        delete listWidget;
-        delete listWidget2;
-        delete dock;                
-        delete dock2;
-        
-        
+        delete m_pTabDlg;
+        delete m_listWidget;
+        delete m_listWidget2;
+        delete m_dock;                
+        delete m_dock2;
     }
 
 

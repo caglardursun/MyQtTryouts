@@ -17,13 +17,11 @@ find_package(Qt5 REQUIRED Core Widgets Gui LinguistTools)
 
 set(resource_files "resource.qrc")
 
-
-
-
 #source files ...
 set(project_sources "main.cpp" 
                     "View/mainwindow.cpp"   
                     "View/basewindow.cpp"                                      
+                    "View/maintab.cpp"                                      
                     "Model/provider.cpp"
                     "Model/settings.cpp"
                     "Model/logger.cpp"
@@ -33,6 +31,7 @@ set(project_sources "main.cpp"
 #header files ...
 set(project_headers "View/mainwindow.h" 
                     "View/basewindow.h"
+                    "View/maintab.h"                                      
                     "Model/provider.h"                    
                     "Model/settings.h"
                     "Model/logger.h" 
@@ -46,12 +45,10 @@ set(project_dialogs "View/mainwindow.ui")
 #set output location
 #set_source_files_properties(${QM_FILES} PROPERTIES OUTPUT_LOCATION "lang")
 
-
 #add translation files
 
 set(translation_files "languages/tr_TR.ts" "languages/en_US.ts")
 #set(qm_files "languages/türkçe.qm" "languages/english.qm")
-
 
 
 qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files})
