@@ -9,11 +9,24 @@
         ui(new Ui::MainWindow)               
     {
         tabWidget = new QTabWidget;
-        tabWidget->addTab(new MainViewer(this),tr("caption"));
-        tabWidget->addTab(new MainViewer(this),tr("caption 2"));
-        
+        tabWidget->setTabsClosable(true);
+        tabWidget->setMovable(true);
+        tabWidget->setDocumentMode(true);
+        // tabWidget->addTab(new MainViewer(this),tr("caption A"));
+        // tabWidget->addTab(new MainViewer(this),tr("caption B"));
+        // tabWidget->addTab(new MainViewer(this),tr("caption C"));
+
+        connect(tabWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(slotCloseTab(int)));
+
+
         ui->setupUi(this);
         Init();               
+    }
+
+    void MainWindow::slotCloseTab(int index)
+    {
+        tabWidget->removeTab(index);
+        delete tabWidget->widget(index);
     }
 
     void MainWindow::Init()
@@ -23,8 +36,6 @@
         createDock();            
         createLanguageMenu();  
         // m_mainTabList = new QList<MainTab*>();
-        
-
         //setCentralWidget();
     }
 
@@ -151,6 +162,7 @@
     MainWindow::~MainWindow()
     {        
         delete ui;                
+        delete tabWidget;
         delete m_listWidget;
         delete m_listWidget2;
         delete m_dock;                
@@ -162,4 +174,19 @@
 void MainWindow::on_actionClose_triggered()
 {
      QApplication::quit();
+}
+
+void MainWindow::on_action_New_triggered()
+{
+    QFileDialog dialog;
+    dialog.setNameFilter(tr("Images (*.png *.tif *.jpg)"));
+    dialog.setViewMode(QFileDialog::Detail);
+    QStringList fileNames;
+    if (dialog.exec())
+        fileNames = dialog.selectedFiles();
+
+    for(int i = 0; i < fileNames.count(); i++)
+    {
+        tabWidget->addTab(new MainViewer(this,fileNames[0]),fileNames[0]);
+    }    
 }

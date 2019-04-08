@@ -44,6 +44,8 @@ class MainWindow : public QMainWindow, public BaseWindow
         protected slots:            
             void slotLanguageChanged(QAction* action);            
         private slots:            
-            void on_actionClose_triggered();
+            void on_actionClose_triggered();            
+            void on_action_New_triggered();
+            void slotCloseTab(int index);
 };
 

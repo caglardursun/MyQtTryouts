@@ -1,11 +1,12 @@
 #include "mainviewer.h"
 #include "ui_mainviewer.h"
 
-MainViewer::MainViewer(QWidget *parent) :
+MainViewer::MainViewer(QWidget *parent, QString& filePath) :
     QWidget(parent),
-    ui(new Ui::MainViewer)
+    ui(new Ui::MainViewer),
+    m_filePath(filePath)
 {
-    ui->setupUi(this);
+    ui->setupUi(this);        
 }
 
 MainViewer::~MainViewer()
