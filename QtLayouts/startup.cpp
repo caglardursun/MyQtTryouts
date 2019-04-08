@@ -2,7 +2,7 @@
 #include "View/mainwindow.h"
 #include "Model/settings.h"
 #include "Model/provider.h"
-#include "ViewModel/MainViewManager.h"
+#include "ViewModel/mainviewmanager.h"
 #include "utils.h"
 #include <QFile>
 #include <QDir>
