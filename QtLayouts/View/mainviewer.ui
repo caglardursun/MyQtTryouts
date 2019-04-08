@@ -13,22 +13,24 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QWidget" name="verticalLayoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>150</x>
-     <y>140</y>
-     <width>160</width>
-     <height>80</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <property name="sizeConstraint">
-     <enum>QLayout::SetMinimumSize</enum>
-    </property>
-   </layout>
-  </widget>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="MainViewer" name="widget" native="true"/>
+     </item>
+    </layout>
+   </item>
+  </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MainViewer</class>
+   <extends>QWidget</extends>
+   <header location="global">mainviewer.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

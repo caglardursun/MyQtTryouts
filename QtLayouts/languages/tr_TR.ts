@@ -5,13 +5,8 @@
     <name>MainViewer</name>
     <message>
         <location filename="../View/mainviewer.ui" line="14"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainviewer.h" line="45"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainviewer.h" line="53"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../View/mainviewer.cpp" line="11"/>
-        <source>your title</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -62,87 +57,72 @@
         <translation type="vanished">İngilizce</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="15"/>
-        <source>caption A</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../View/mainwindow.cpp" line="16"/>
-        <source>caption B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../View/mainwindow.cpp" line="17"/>
-        <source>caption C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../View/mainwindow.cpp" line="51"/>
+        <location filename="../View/mainwindow.cpp" line="49"/>
         <source>Left</source>
         <translation>Sol</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="56"/>
+        <location filename="../View/mainwindow.cpp" line="54"/>
         <source>L1</source>
         <translation>Sol1</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="57"/>
+        <location filename="../View/mainwindow.cpp" line="55"/>
         <source>L2</source>
         <translation>Sol2</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="58"/>
+        <location filename="../View/mainwindow.cpp" line="56"/>
         <source>L3</source>
         <translation>Sol3</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="59"/>
+        <location filename="../View/mainwindow.cpp" line="57"/>
         <source>L4</source>
         <translation>Sol4</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="60"/>
+        <location filename="../View/mainwindow.cpp" line="58"/>
         <source>L5</source>
         <translation>Sol5</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="61"/>
+        <location filename="../View/mainwindow.cpp" line="59"/>
         <source>L6</source>
         <translation>Sol6</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="66"/>
+        <location filename="../View/mainwindow.cpp" line="64"/>
         <source>Right</source>
         <translation>Sağ</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="70"/>
+        <location filename="../View/mainwindow.cpp" line="68"/>
         <source>R1</source>
         <translation>Sağ1</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="71"/>
+        <location filename="../View/mainwindow.cpp" line="69"/>
         <source>R2</source>
         <translation>Sağ2</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="72"/>
+        <location filename="../View/mainwindow.cpp" line="70"/>
         <source>R3</source>
         <translation>Sağ3</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="73"/>
+        <location filename="../View/mainwindow.cpp" line="71"/>
         <source>R4</source>
         <translation>Sağ4</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="74"/>
+        <location filename="../View/mainwindow.cpp" line="72"/>
         <source>R5</source>
         <translation>Sağ5</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="182"/>
+        <location filename="../View/mainwindow.cpp" line="180"/>
         <source>Images (*.png *.tif *.jpg)</source>
         <translation type="unfinished"></translation>
     </message>

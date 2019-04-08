@@ -1,20 +1,18 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "ui_mainviewer.h"
+#include "View/mainviewer.h"
 #include <QIcon>
-#include "mainviewer.h"
+
 
     MainWindow::MainWindow(QWidget *parent) :
-        QMainWindow(parent),                       
+        QMainWindow(parent),   
+        BaseWindow(),                    
         ui(new Ui::MainWindow)               
     {
         tabWidget = new QTabWidget;
         tabWidget->setTabsClosable(true);
         tabWidget->setMovable(true);
         tabWidget->setDocumentMode(true);
-        // tabWidget->addTab(new MainViewer(this),tr("caption A"));
-        // tabWidget->addTab(new MainViewer(this),tr("caption B"));
-        // tabWidget->addTab(new MainViewer(this),tr("caption C"));
 
         connect(tabWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(slotCloseTab(int)));
 
@@ -120,13 +118,13 @@
         m_langPath = QApplication::applicationDirPath();
         //m_langPath.append("/languages");
         QDir dir(m_langPath);
-        QStringList fileNames = dir.entryList(QStringList("*.qm"));
+        QStringList files = dir.entryList(QStringList("*.qm"));
 
-        for (int i = 0; i < fileNames.size(); ++i) 
+        for (int i = 0; i < files.size(); ++i) 
         {
             // get locale extracted by filename
             QString locale;
-            locale = fileNames[i]; // "tr_TR.qm"
+            locale = files[i]; // "tr_TR.qm"
             locale.truncate(locale.lastIndexOf('.')); // "tr_TR"
 
             QString lang = QLocale::languageToString(QLocale(locale).language());
@@ -181,12 +179,15 @@ void MainWindow::on_action_New_triggered()
     QFileDialog dialog;
     dialog.setNameFilter(tr("Images (*.png *.tif *.jpg)"));
     dialog.setViewMode(QFileDialog::Detail);
-    QStringList fileNames;
+    QStringList files;
     if (dialog.exec())
-        fileNames = dialog.selectedFiles();
+        files = dialog.selectedFiles();
 
-    for(int i = 0; i < fileNames.count(); i++)
+    for(int i = 0; i < files.count(); i++)
     {
-        tabWidget->addTab(new MainViewer(this,fileNames[0]),fileNames[0]);
+        QFileInfo fi(files[0]);        
+        MainViewer* mv = new MainViewer(this);
+        mv->Load(files[i]);
+        tabWidget->addTab(mv,fi.fileName());
     }    
 }

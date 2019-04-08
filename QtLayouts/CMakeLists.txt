@@ -18,6 +18,10 @@ find_package(Qt5 REQUIRED Core Widgets Gui LinguistTools)
 #I'm sick and tired to add these line everythime I try to add a class or 
 #dialog file into the project. I'm too lazy 4 this
 
+include_directories("View")
+include_directories("Model")
+include_directories("ViewModel")
+
 file(GLOB project_sources "*.cpp" "View/*.cpp" "Model/*.cpp"  "ViewModel/*.cpp")
 file(GLOB project_headers "*.h" "View/*.h" "Model/*.h"  "ViewModel/*.h")
 file(GLOB project_dialogs "View/*.ui")
