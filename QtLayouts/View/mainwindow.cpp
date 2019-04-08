@@ -1,13 +1,30 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "View/mainviewer.h"
 #include <QIcon>
 
+
     MainWindow::MainWindow(QWidget *parent) :
-        QMainWindow(parent),                       
+        QMainWindow(parent),   
+        BaseWindow(),                    
         ui(new Ui::MainWindow)               
     {
+        tabWidget = new QTabWidget;
+        tabWidget->setTabsClosable(true);
+        tabWidget->setMovable(true);
+        tabWidget->setDocumentMode(true);
+
+        connect(tabWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(slotCloseTab(int)));
+
+
         ui->setupUi(this);
         Init();               
+    }
+
+    void MainWindow::slotCloseTab(int index)
+    {
+        tabWidget->removeTab(index);
+        delete tabWidget->widget(index);
     }
 
     void MainWindow::Init()
@@ -15,18 +32,25 @@
         //Load language from settings        
         loadLanguage(m_Settings.getCurrentLanguage());
         createDock();            
-        createLanguageMenu();    
+        createLanguageMenu();  
+        // m_mainTabList = new QList<MainTab*>();
+        //setCentralWidget();
     }
 
-    
-
+        
     void MainWindow::createDock()
     {
-        dock= new QDockWidget(tr("Left"), this);
-        dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea | Qt::BottomDockWidgetArea); 
-        listWidget= new QListWidget(dock);
+        // m_mainTab = new MainTab(this);
+        // setCentralWidget(m_mainTab);
+
+        setCentralWidget(tabWidget);
+
+
+        m_dock= new QDockWidget(tr("Left"), this);
+        m_dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea ); 
+        m_listWidget= new QListWidget(m_dock);
         
-        listWidget->addItems(QStringList()
+        m_listWidget->addItems(QStringList()
             << tr("L1")
             << tr("L2")
             << tr("L3")
@@ -35,21 +59,23 @@
             << tr("L6"));
 
         //Allow left right and bottom
-        dock->setWidget(listWidget);
+        m_dock->setWidget(m_listWidget);
 
-        dock2=new QDockWidget(tr("Right"), this);
-        listWidget2 = new QListWidget(dock2);
-        listWidget2->addItems(QStringList()
+        m_dock2=new QDockWidget(tr("Right"), this);
+        m_dock2->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea ); 
+        m_listWidget2 = new QListWidget(m_dock2);
+        m_listWidget2->addItems(QStringList()
             << tr("R1")
             << tr("R2")
             << tr("R3")
             << tr("R4")
             << tr("R5")
             );
-        dock2->setWidget(listWidget2);
+        m_dock2->setWidget(m_listWidget2);
         
-        addDockWidget(Qt::LeftDockWidgetArea, dock);        
-        addDockWidget(Qt::RightDockWidgetArea, dock2); 
+        addDockWidget(Qt::LeftDockWidgetArea, m_dock);        
+        addDockWidget(Qt::RightDockWidgetArea, m_dock2); 
+
     }
 
     void MainWindow::changeEvent(QEvent* event)
@@ -92,13 +118,13 @@
         m_langPath = QApplication::applicationDirPath();
         //m_langPath.append("/languages");
         QDir dir(m_langPath);
-        QStringList fileNames = dir.entryList(QStringList("*.qm"));
+        QStringList files = dir.entryList(QStringList("*.qm"));
 
-        for (int i = 0; i < fileNames.size(); ++i) 
+        for (int i = 0; i < files.size(); ++i) 
         {
             // get locale extracted by filename
             QString locale;
-            locale = fileNames[i]; // "tr_TR.qm"
+            locale = files[i]; // "tr_TR.qm"
             locale.truncate(locale.lastIndexOf('.')); // "tr_TR"
 
             QString lang = QLocale::languageToString(QLocale(locale).language());
@@ -128,20 +154,17 @@
             // load the language dependant on the action content
             loadLanguage(action->data().toString());
             setWindowIcon(action->icon());
-        }
-
-        //menuLanguage
+        }        
     }
 
     MainWindow::~MainWindow()
     {        
-        delete ui;        
-        delete listWidget;
-        delete listWidget2;
-        delete dock;                
-        delete dock2;
-        
-        
+        delete ui;                
+        delete tabWidget;
+        delete m_listWidget;
+        delete m_listWidget2;
+        delete m_dock;                
+        delete m_dock2;
     }
 
 
@@ -149,4 +172,22 @@
 void MainWindow::on_actionClose_triggered()
 {
      QApplication::quit();
+}
+
+void MainWindow::on_action_New_triggered()
+{
+    QFileDialog dialog;
+    dialog.setNameFilter(tr("Images (*.png *.tif *.jpg)"));
+    dialog.setViewMode(QFileDialog::Detail);
+    QStringList files;
+    if (dialog.exec())
+        files = dialog.selectedFiles();
+
+    for(int i = 0; i < files.count(); i++)
+    {
+        QFileInfo fi(files[0]);        
+        MainViewer* mv = new MainViewer(this);
+        mv->Load(files[i]);
+        tabWidget->addTab(mv,fi.fileName());
+    }    
 }

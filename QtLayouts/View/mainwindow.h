@@ -3,6 +3,7 @@
 #include <QMainWindow>
 #include <QtWidgets>
 #include <QTranslator>
+#include <QTabBar>
 #include "Model/provider.h"
 #include "Model/settings.h"
 #include "View/basewindow.h"
@@ -11,7 +12,7 @@ using namespace Miracle;
 
 namespace Ui 
 {
-    class MainWindow;
+    class MainWindow;    
 }
 
 
@@ -29,19 +30,22 @@ class MainWindow : public QMainWindow, public BaseWindow
             void createLanguageMenu();            
             void createDock();        
         private:
-            QDockWidget* dock;    
-            QDockWidget* dock2;
+            QDockWidget* m_dock;    
+            QDockWidget* m_dock2;
+            //QDockWidget* m_mainDock;
 
-            QListWidget* listWidget;
-            QListWidget* listWidget2;
+            QListWidget* m_listWidget;
+            QListWidget* m_listWidget2;                        
 
         protected:            
             void changeEvent(QEvent*);
-            // Settings& m_Settings;
+            QTabWidget *tabWidget;
 
         protected slots:            
             void slotLanguageChanged(QAction* action);            
         private slots:            
-            void on_actionClose_triggered();
+            void on_actionClose_triggered();            
+            void on_action_New_triggered();
+            void slotCloseTab(int index);
 };
 

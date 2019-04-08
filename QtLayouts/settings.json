@@ -7,10 +7,11 @@
       "tr_TR",
       "en_US"
     ],
-    "currentStyle":"darkorange",    
+    "currentStyle":"default",    
     "supportedStyles": [
+      "default",
       "darkorange",
-      "darkblue"
+      "darkblue"      
     ]
   }
   

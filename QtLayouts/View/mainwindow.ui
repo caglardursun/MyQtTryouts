@@ -49,7 +49,6 @@
     <bool>false</bool>
    </attribute>
    <addaction name="action_New"/>
-   <addaction name="actionClose"/>
    <addaction name="actionSave"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>

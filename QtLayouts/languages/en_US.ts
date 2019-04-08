@@ -2,6 +2,15 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="tr_TR">
 <context>
+    <name>MainViewer</name>
+    <message>
+        <location filename="../View/mainviewer.ui" line="14"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainviewer.h" line="53"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <location filename="../View/mainwindow.ui" line="14"/>
@@ -48,69 +57,74 @@
         <translation type="vanished">English</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="25"/>
+        <location filename="../View/mainwindow.cpp" line="49"/>
         <source>Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="30"/>
+        <location filename="../View/mainwindow.cpp" line="54"/>
         <source>L1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="31"/>
+        <location filename="../View/mainwindow.cpp" line="55"/>
         <source>L2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="32"/>
+        <location filename="../View/mainwindow.cpp" line="56"/>
         <source>L3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="33"/>
+        <location filename="../View/mainwindow.cpp" line="57"/>
         <source>L4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="34"/>
+        <location filename="../View/mainwindow.cpp" line="58"/>
         <source>L5</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="35"/>
+        <location filename="../View/mainwindow.cpp" line="59"/>
         <source>L6</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="40"/>
+        <location filename="../View/mainwindow.cpp" line="64"/>
         <source>Right</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="43"/>
+        <location filename="../View/mainwindow.cpp" line="68"/>
         <source>R1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="44"/>
+        <location filename="../View/mainwindow.cpp" line="69"/>
         <source>R2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="45"/>
+        <location filename="../View/mainwindow.cpp" line="70"/>
         <source>R3</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="46"/>
+        <location filename="../View/mainwindow.cpp" line="71"/>
         <source>R4</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="47"/>
+        <location filename="../View/mainwindow.cpp" line="72"/>
         <source>R5</source>
         <translation></translation>
+    </message>
+    <message>
+        <location filename="../View/mainwindow.cpp" line="180"/>
+        <source>Images (*.png *.tif *.jpg)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
