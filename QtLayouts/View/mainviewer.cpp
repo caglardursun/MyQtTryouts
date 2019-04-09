@@ -1,113 +1,111 @@
-#include "View/mainviewer.h"
+    #include "mainviewer.h"
 
 
-MainViewer::MainViewer(QWidget *parent, QString& filePath) :
-    QWidget(parent),
-    m_filePath(filePath)    
-{
-    // ui->setupUi(this);        
-    //Load();
-    m_CachedImage.load(m_filePath);
-
-    if(m_CachedImage.width() > m_CachedImage.height())
-        m_aspectRatio = m_CachedImage.width() / m_CachedImage.height();
-    if(m_CachedImage.height() > m_CachedImage.width())
-        m_aspectRatio = m_CachedImage.height() / m_CachedImage.width();
-}
-
-MainViewer::~MainViewer()
-{
-    // delete ui;
-}
-
-
-
-
-void MainViewer::SetRenderFocus(QRect rect)
-{
-    m_RenderFocusZone = rect;
-    m_AbsctractSize = rect.size() * m_Zoom;
-
-    m_x = rect.x();
-    m_y = rect.y();
-}
-
-void MainViewer::keyPressEvent(QKeyEvent *event)
-{
-    Q_UNUSED(event);
-    //on use of event pointer, remove this line
-    //key events go here
-}
-
-void MainViewer::mousePressEvent(QMouseEvent *event)
-{
-    m_bIsMouseDown = true;
-    m_OldPos = event->pos();
-}
-
-void MainViewer::mouseReleaseEvent(QMouseEvent *event)
-{
-    Q_UNUSED(event);
-    m_bIsMouseDown = false;
-}
-
-void MainViewer::mouseMoveEvent(QMouseEvent *event)
-{
-    if(m_bIsMouseDown)
+    MainViewer::MainViewer(QWidget *parent, QString& filePath) :
+        QWidget(parent),
+        m_filePath(filePath)    
     {
-        QPoint p = event->pos();
-        int deltaX = p.x() - m_OldPos.x();
-        int deltaY = p.y() - m_OldPos.y();
+        // ui->setupUi(this);        
+        //Load();
+        m_CachedImage.load(m_filePath);
 
-        m_x -= deltaX;
-        m_y -= deltaY;
+        if(m_CachedImage.width() > m_CachedImage.height())
+            m_aspectRatio = m_CachedImage.width() / m_CachedImage.height();
+        if(m_CachedImage.height() > m_CachedImage.width())
+            m_aspectRatio = m_CachedImage.height() / m_CachedImage.width();
+    }
 
-        m_RenderFocusZone.moveTo(m_x, m_y);
-        m_OldPos = p;
+    MainViewer::~MainViewer()
+    {
+        // delete ui;
+    }
+
+    void MainViewer::paintEvent(QPaintEvent *event)
+    {
+        Q_UNUSED(event);
+
+
+        QPainter painter(this);
+        const QRect r(0, 0, width(), height());
+
+        m_AbsctractSize = m_RenderFocusZone.size();
+
+        m_AbsctractSize.scale(m_AbsctractSize * m_Zoom, Qt::AspectRatioMode::KeepAspectRatio);
+
+        QRect ar(m_RenderFocusZone.x() * m_Zoom,
+                m_RenderFocusZone.y() * m_Zoom,
+                m_AbsctractSize.width(),
+                m_AbsctractSize.height());
+
+        QImage p = m_CachedImage.copy(ar);
+
+        painter.drawImage(r, p);
+    }
+
+    void MainViewer::wheelEvent(QWheelEvent *event)
+    {
+        const float divisionRatio = 0.05f;
+        int delta = event->delta();
+
+        if(delta < 0)
+            m_Zoom -= divisionRatio;
+        if(delta > 0)
+            m_Zoom += divisionRatio;
+
+        if(m_Zoom < divisionRatio)
+            m_Zoom = divisionRatio;
+        if(m_Zoom > 9)
+            m_Zoom = 9;
 
         update();
     }
-}
 
-void MainViewer::wheelEvent(QWheelEvent *event)
-{
-    const float divisionRatio = 0.05f;
-    int delta = event->delta();
+    void MainViewer::SetRenderFocus(QRect rect)
+    {
+        m_RenderFocusZone = rect;
+        m_AbsctractSize = rect.size() * m_Zoom;
 
-    if(delta < 0)
-        m_Zoom -= divisionRatio;
-    if(delta > 0)
-        m_Zoom += divisionRatio;
+        m_x = rect.x();
+        m_y = rect.y();
+    }
 
-    if(m_Zoom < divisionRatio)
-        m_Zoom = divisionRatio;
-    if(m_Zoom > 9)
-        m_Zoom = 9;
+    void MainViewer::keyPressEvent(QKeyEvent *event)
+    {
+        Q_UNUSED(event);
+        //on use of event pointer, remove this line
+        //key events go here
+    }
 
+    void MainViewer::mousePressEvent(QMouseEvent *event)
+    {
+        m_bIsMouseDown = true;
+        m_OldPos = event->pos();
+    }
 
-    update();
-}
+    void MainViewer::mouseReleaseEvent(QMouseEvent *event)
+    {
+        Q_UNUSED(event);
+        m_bIsMouseDown = false;
+    }
 
-void MainViewer::paintEvent(QPaintEvent *event)
-{
-    Q_UNUSED(event);
+    void MainViewer::mouseMoveEvent(QMouseEvent *event)
+    {
+        if(m_bIsMouseDown)
+        {
+            QPoint p = event->pos();
+            int deltaX = p.x() - m_OldPos.x();
+            int deltaY = p.y() - m_OldPos.y();
 
+            m_x -= deltaX;
+            m_y -= deltaY;
 
-    QPainter painter(this);
+            m_RenderFocusZone.moveTo(m_x, m_y);
+            m_OldPos = p;
 
-    const QRect r(0, 0, width(), height());
+            update();
+        }
+    }
 
-    m_AbsctractSize = m_RenderFocusZone.size();
+    
 
-    m_AbsctractSize.scale(m_AbsctractSize * m_Zoom,
-                          Qt::AspectRatioMode::KeepAspectRatio);
-
-    QRect ar(m_RenderFocusZone.x() * m_Zoom,
-             m_RenderFocusZone.y() * m_Zoom,
-             m_AbsctractSize.width(),
-             m_AbsctractSize.height());
-
-    QImage p = m_CachedImage.copy(ar);
-
-    painter.drawImage(r, p);
-}
+    

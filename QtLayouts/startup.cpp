@@ -20,7 +20,7 @@ namespace Miracle
     Startup::Startup() : 
         QObject(nullptr),                
         m_MainWindow( *new MainWindow(nullptr) ),
-        m_mainViewManager(new MainViewManager(this,Provider::GetSettingsAsSingleton()))
+        m_mainViewManager(new MainViewManager(this,Provider::GetSettingsAsSingleton(),m_MainWindow))
     {		
         
         

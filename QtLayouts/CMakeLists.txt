@@ -18,9 +18,7 @@ find_package(Qt5 REQUIRED Core Widgets Gui LinguistTools)
 #I'm sick and tired to add these line everythime I try to add a class or 
 #dialog file into the project. I'm too lazy 4 this
 
-include_directories("View")
-include_directories("Model")
-include_directories("ViewModel")
+
 
 file(GLOB project_sources "*.cpp" "View/*.cpp" "Model/*.cpp"  "ViewModel/*.cpp")
 file(GLOB project_headers "*.h" "View/*.h" "Model/*.h"  "ViewModel/*.h")
@@ -62,7 +60,7 @@ set(translation_files "languages/tr_TR.ts" "languages/en_US.ts")
 #set(qm_files "languages/türkçe.qm" "languages/english.qm")
 
 
-qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files})
+qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files} "${CMAKE_BINARY_DIR}" )
 
 
 add_custom_target(translations DEPENDS ${qm_files})

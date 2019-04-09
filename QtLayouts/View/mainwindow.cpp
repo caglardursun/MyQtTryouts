@@ -1,7 +1,8 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include "View/mainviewer.h"
-#include <QIcon>
+    #include "mainwindow.h"
+    #include "ui_mainwindow.h"
+    #include "View/mainviewer.h"
+    #include "utils.h"
+    #include <QIcon>
 
 
     MainWindow::MainWindow(QWidget *parent) :
@@ -16,13 +17,24 @@
 
         connect(tabWidget, SIGNAL(tabCloseRequested(int)), this, SLOT(slotCloseTab(int)));
 
-
         ui->setupUi(this);
         Init();               
     }
 
+    MainWindow::~MainWindow()
+    {        
+        Utils::DestructorMsg(this);
+        delete ui;                
+        delete tabWidget;
+        // delete m_listWidget;
+        // delete m_listWidget2;
+        // delete m_dock;                
+        // delete m_dock2;
+    }
+
     void MainWindow::slotCloseTab(int index)
     {
+
         //Eğer widget index i sıfır ise hepsi gidiyor
         tabWidget->removeTab(index);
         QWidget* pwidget = tabWidget->widget(index);
@@ -46,37 +58,38 @@
         // setCentralWidget(m_mainTab);
 
         setCentralWidget(tabWidget);
-
-
-        m_dock= new QDockWidget(tr("Left"), this);
-        m_dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea ); 
-        m_listWidget= new QListWidget(m_dock);
+        ui->dockLeft->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea);
         
-        m_listWidget->addItems(QStringList()
-            << tr("L1")
-            << tr("L2")
-            << tr("L3")
-            << tr("L4")
-            << tr("L5")
-            << tr("L6"));
 
-        //Allow left right and bottom
-        m_dock->setWidget(m_listWidget);
-
-        m_dock2=new QDockWidget(tr("Right"), this);
-        m_dock2->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea ); 
-        m_listWidget2 = new QListWidget(m_dock2);
-        m_listWidget2->addItems(QStringList()
-            << tr("R1")
-            << tr("R2")
-            << tr("R3")
-            << tr("R4")
-            << tr("R5")
-            );
-        m_dock2->setWidget(m_listWidget2);
+        // m_dock= new QDockWidget(tr("Left"), this);
+        // m_dock->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea ); 
+        // m_listWidget= new QListWidget(m_dock);
         
-        addDockWidget(Qt::LeftDockWidgetArea, m_dock);        
-        addDockWidget(Qt::RightDockWidgetArea, m_dock2); 
+        // m_listWidget->addItems(QStringList()
+        //     << tr("L1")
+        //     << tr("L2")
+        //     << tr("L3")
+        //     << tr("L4")
+        //     << tr("L5")
+        //     << tr("L6"));
+
+        // //Allow left right and bottom
+        // m_dock->setWidget(m_listWidget);
+
+        // m_dock2=new QDockWidget(tr("Right"), this);
+        // m_dock2->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetArea ); 
+        // m_listWidget2 = new QListWidget(m_dock2);
+        // m_listWidget2->addItems(QStringList()
+        //     << tr("R1")
+        //     << tr("R2")
+        //     << tr("R3")
+        //     << tr("R4")
+        //     << tr("R5")
+        //     );
+        // m_dock2->setWidget(m_listWidget2);
+        
+        // addDockWidget(Qt::LeftDockWidgetArea, m_dock);        
+        // addDockWidget(Qt::RightDockWidgetArea, m_dock2); 
 
     }
 
@@ -159,38 +172,30 @@
         }        
     }
 
-    MainWindow::~MainWindow()
-    {        
-        delete ui;                
-        delete tabWidget;
-        delete m_listWidget;
-        delete m_listWidget2;
-        delete m_dock;                
-        delete m_dock2;
+    
+    void MainWindow::on_actionClose_triggered()
+    {
+        QApplication::quit();
     }
 
-
-
-void MainWindow::on_actionClose_triggered()
-{
-     QApplication::quit();
-}
-
-void MainWindow::on_action_New_triggered()
-{
-    QFileDialog dialog;
-    dialog.setNameFilter(tr("Images (*.png *.tif *.jpg)"));
-    dialog.setViewMode(QFileDialog::Detail);
-    QStringList files;
-    if (dialog.exec())
-        files = dialog.selectedFiles();
-
-    for(int i = 0; i < files.count(); i++)
+    void MainWindow::on_action_New_triggered()
     {
-        QFileInfo fi(files[0]);        
-        MainViewer* mv = new MainViewer(this,files[i]);
-        
-        tabWidget->addTab(mv,fi.fileName());
-        tabWidget->setCurrentIndex(tabWidget->count()-1);
-    }    
-}
+        QFileDialog dialog;
+        dialog.setNameFilter(tr("Images (*.png *.tif *.jpg)"));
+        dialog.setViewMode(QFileDialog::Detail);
+        QStringList files;
+        if (dialog.exec())
+            files = dialog.selectedFiles();
+
+        if(files.count() == 0)
+            return;
+
+        for(int i = 0; i < files.count(); i++)
+        {
+            QFileInfo fi(files[0]);        
+            MainViewer* mv = new MainViewer(this,files[i]);
+            
+            tabWidget->addTab(mv,fi.fileName());
+            tabWidget->setCurrentIndex(tabWidget->count()-1);
+        }    
+    }

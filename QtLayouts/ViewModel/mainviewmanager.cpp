@@ -5,9 +5,10 @@
 namespace Miracle
 {
 
-    MainViewManager::MainViewManager(QObject* parent,Settings& config)
-        :QObject(nullptr),
-        m_Settings(config)        
+    MainViewManager::MainViewManager(QObject* parent,Settings& config,MainWindow& mainwindow)
+        :QObject(parent),
+        m_Settings(config),
+        m_mainwindow(mainwindow)        
     {
 
     }
