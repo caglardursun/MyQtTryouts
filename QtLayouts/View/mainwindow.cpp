@@ -118,6 +118,7 @@
 
     void MainWindow::createLanguageMenu()
     {
+        
         QActionGroup* langGroup = new QActionGroup(ui->menuLanguage);
         langGroup->setExclusive(true);
 

@@ -95,14 +95,24 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>20</width>
+           <width>50</width>
            <height>20</height>
           </size>
          </property>
         </spacer>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox"/>
+        <widget class="QSpinBox" name="spinBox">
+         <property name="toolTip">
+          <string>If you have a large memory, keep close to maximum. Otherwise keep close to minimum.</string>
+         </property>
+         <property name="minimum">
+          <number>5</number>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+        </widget>
        </item>
        <item>
         <spacer name="horizontalSpacer">
@@ -114,7 +124,7 @@
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>20</width>
+           <width>10</width>
            <height>20</height>
           </size>
          </property>
@@ -143,6 +153,9 @@
    </widget>
   </widget>
   <widget class="QDockWidget" name="dockLeft">
+   <property name="floating">
+    <bool>false</bool>
+   </property>
    <property name="windowTitle">
     <string>Preview</string>
    </property>
@@ -165,6 +178,12 @@
    </widget>
   </widget>
   <widget class="QDockWidget" name="dockRightBottom">
+   <property name="features">
+    <set>QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::LeftDockWidgetArea|Qt::RightDockWidgetArea</set>
+   </property>
    <property name="windowTitle">
     <string>Color Catalog</string>
    </property>

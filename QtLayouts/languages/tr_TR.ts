@@ -2,6 +2,13 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="tr_TR">
 <context>
+    <name>MainTab</name>
+    <message>
+        <source>Form</source>
+        <translation type="obsolete">Forum</translation>
+    </message>
+</context>
+<context>
     <name>MainViewer</name>
     <message>
         <location filename="../View/mainviewer.ui" line="14"/>
@@ -14,103 +21,108 @@
     <name>MainWindow</name>
     <message>
         <location filename="../View/mainwindow.ui" line="14"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="242"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="245"/>
         <source>MainWindow</source>
         <translation>Ana Pencere</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="30"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="255"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="258"/>
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="38"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="256"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="259"/>
         <source>&amp;Language</source>
         <translation>&amp;Dil</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="43"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="257"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="260"/>
         <source>View</source>
         <translation>Görünüm</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="66"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="258"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="261"/>
         <source>History</source>
         <translation>Geçmiş</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="84"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="259"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="262"/>
         <source>History Size</source>
         <translation>Geçmiş Boyutu</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="126"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="260"/>
+        <location filename="../View/mainwindow.ui" line="107"/>
+        <source>If you have a large memory, keep close to maximum. Otherwise keep close to minimum.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../View/mainwindow.ui" line="136"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="263"/>
         <source>Apply</source>
         <translation>Uygula</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="147"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="261"/>
+        <location filename="../View/mainwindow.ui" line="160"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="264"/>
         <source>Preview</source>
         <translation>Önizleme</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="169"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="262"/>
+        <location filename="../View/mainwindow.ui" line="188"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="265"/>
         <source>Color Catalog</source>
         <translation>Renk Kataloğu</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="193"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="243"/>
+        <location filename="../View/mainwindow.ui" line="212"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="246"/>
         <source>&amp;New</source>
         <translation>&amp;Yeni</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="203"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="244"/>
+        <location filename="../View/mainwindow.ui" line="222"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="247"/>
         <source>Exit</source>
         <translation>Çık</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="213"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="245"/>
+        <location filename="../View/mainwindow.ui" line="232"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="248"/>
         <source>&amp;Save</source>
         <translation>Kaydet</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="223"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="246"/>
+        <location filename="../View/mainwindow.ui" line="242"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="249"/>
         <source>Undo</source>
         <translation>Geri</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="226"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="248"/>
+        <location filename="../View/mainwindow.ui" line="245"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="251"/>
         <source>Ctrl+Z</source>
         <translation>Ctrl+Z</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="236"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="250"/>
+        <location filename="../View/mainwindow.ui" line="255"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="253"/>
         <source>Redo</source>
         <translation>İleri</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="239"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="252"/>
+        <location filename="../View/mainwindow.ui" line="258"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="255"/>
         <source>Ctrl+Shift+Z</source>
         <translation>Ctrl+Shift+Z</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="247"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="254"/>
+        <location filename="../View/mainwindow.ui" line="266"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="257"/>
         <source>History Window</source>
         <translation>Geçmiş Penceresi</translation>
     </message>
@@ -175,7 +187,7 @@
         <translation type="vanished">Sağ5</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="184"/>
+        <location filename="../View/mainwindow.cpp" line="185"/>
         <source>Images (*.png *.tif *.jpg)</source>
         <translation type="unfinished"></translation>
     </message>

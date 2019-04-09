@@ -59,12 +59,16 @@ set(resource_files "resource.qrc")
 set(translation_files "languages/tr_TR.ts" "languages/en_US.ts")
 #set(qm_files "languages/türkçe.qm" "languages/english.qm")
 
-
-qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files} "${CMAKE_BINARY_DIR}" )
+#languages kasörü oluştur
+#file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/languages")
+#qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files} "${CMAKE_BINARY_DIR}/languages" )
+qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files})
 
 
 add_custom_target(translations DEPENDS ${qm_files})
 #compiled language files will be on the same languages directory
+
+
 
 
 #if the compiler is msvc
