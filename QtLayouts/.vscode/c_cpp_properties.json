@@ -23,13 +23,13 @@
             "name": "Win",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include",
-                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtCore",
-                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\.\\\\\\\\mkspecs\\\\\\\\win32-msvc",
-                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtWidgets",
-                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtGui",
-                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtANGLE",
-                "C:\\\\\\\\Qt\\\\\\\\Qt5.12.1\\\\\\\\5.12.1\\\\\\\\msvc2017_64\\\\\\\\include\\\\\\\\QtNetwork"
+                "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include",
+                "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtCore",
+                "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\.\\mkspecs\\win32-msvc",
+                "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtWidgets",
+                "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtGui",
+                "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtANGLE",
+                "C:\\Qt\\Qt5.12.1\\5.12.1\\msvc2017_64\\include\\QtNetwork"
             ],
             "defines": [
                 "_DEBUG",
