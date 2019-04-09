@@ -59,7 +59,7 @@
         <location filename="../View/mainwindow.ui" line="107"/>
         <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="266"/>
         <source>If you have a large memory, keep close to maximum. Otherwise keep close to minimum.</source>
-        <translation type="unfinished"></translation>
+        <translation>Eğer büyük bir belleğiniz varsa maximum tutun. Yoksa minimum da bırakın</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="136"/>
@@ -190,7 +190,7 @@
     <message>
         <location filename="../View/mainwindow.cpp" line="185"/>
         <source>Images (*.png *.tif *.jpg)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">İmaj (*.png *.tif *.jpg)</translation>
     </message>
     <message>
         <source>Current Language changed to %1</source>
@@ -236,7 +236,7 @@
     <message>
         <location filename="../Model/settings.cpp" line="114"/>
         <source>Could not write default settings to %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Varsayılan ayarlar yazılamadı</translation>
     </message>
     <message>
         <location filename="../Model/settings.cpp" line="117"/>
@@ -246,7 +246,7 @@
     <message>
         <location filename="../Model/settings.cpp" line="147"/>
         <source>Resource directory not found</source>
-        <translation type="unfinished"></translation>
+        <translation>Resource klasörü bulunamadı</translation>
     </message>
     <message>
         <source>Message</source>
