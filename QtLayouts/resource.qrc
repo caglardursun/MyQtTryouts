@@ -6,10 +6,6 @@
         <file>images/undo.png</file>
         <file>images/redo.png</file>
         <file>images/reset.png</file>
-        <file>styles/darkorange/darkorange.qss</file>
-        <file>styles/darkblue/darkblue.qss</file>
-        
-
         <file>images/dark/branch_closed.svg</file>
         <file>images/dark/branch_closed-on.svg</file>
         <file>images/dark/branch_open.svg</file>
@@ -57,5 +53,9 @@
     </qresource>
     <qresource prefix="/json">
         <file>settings.json</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>styles/darkblue/darkblue.qss</file>
+        <file>styles/darkorange/darkorange.qss</file>
     </qresource>
 </RCC>

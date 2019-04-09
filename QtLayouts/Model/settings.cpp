@@ -92,9 +92,8 @@ namespace Miracle
             }
         }else
         {
-            
-            QMessageBox::information(nullptr,tr("Message"),tr("Writing default configuration should be implimented !"));
-            //WriteDefaultsToStdConfigFile(std_file, this);
+                        
+            WriteDefaultsToStdConfigFile(std_file, default_Settings);
         }
 
         return default_Settings;
@@ -105,18 +104,17 @@ namespace Miracle
         int length = settings.length();
         if (!stdConfigFile.open(QFile::WriteOnly|QFile::Text))
         {
-            SendErrorMessage("Could not open file to write " + stdConfigFile.fileName());
+            SendErrorMessage(tr("Could not open file to write %1").arg(stdConfigFile.fileName()));
         }
         else
         {
             qint64 bytes_written = stdConfigFile.write(qPrintable(settings),length);
             if (bytes_written != length)
             {
-            SendErrorMessage("Could not write default settings to " + stdConfigFile.fileName());
+            SendErrorMessage(tr("Could not write default settings to %1").arg(stdConfigFile.fileName()));
             if (!stdConfigFile.remove())
             {
-                SendErrorMessage("Count not remove configuration file. Please delete " +
-                                stdConfigFile.fileName());
+                SendErrorMessage(tr("Coudt not remove configuration file. Please delete %1").arg(stdConfigFile.fileName()));
             }
             }
             stdConfigFile.close();
@@ -146,7 +144,7 @@ namespace Miracle
             QDir res_dir(RESOURCE_PREFIX);
             if(!res_dir.exists()){
                 //ToDo Send Error message
-                SendErrorMessage(tr("Some resource shit happened"));
+                SendErrorMessage(tr("Resource directory not found"));
                 return "";
             }
 

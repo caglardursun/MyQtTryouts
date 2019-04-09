@@ -15,7 +15,7 @@ namespace Miracle
 {
     const QString dockRight("Right");
     const QString dockLeft("Left");
-    static auto STYLE_PREFIX = QStringLiteral(":/styles");
+    static auto STYLE_PREFIX = QStringLiteral(":/styles/");
 
     Startup::Startup() : 
         QObject(nullptr),                
@@ -54,7 +54,7 @@ namespace Miracle
             QString fileName("%1.qss");
             fileName = fileName.arg(currentSetting.getCurrentStyle());
             
-            QString path =res_dir.filePath(fileName);
+            QString path =res_dir.filePath(QString("%1/%2").arg(currentSetting.getCurrentStyle()).arg(fileName));
             
             QFile res_file(path);
             if(res_file.open(QFile::ReadOnly))
