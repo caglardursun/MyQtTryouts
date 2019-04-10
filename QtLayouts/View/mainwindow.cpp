@@ -195,22 +195,24 @@
             // load the view dependent on the action content
             QList<QDockWidget *> pDockWidgets = findChildren<QDockWidget*>();
 
-             for(int i=0; i< pDockWidgets.count(); i++)
-             {
-                    QDockWidget * pDock = pDockWidgets.at(i);
-                    QString title = pDock->windowTitle();
-                    if(title == action->data().toString())
-                    {
-                        if(action->isChecked())
-                        {
-                            pDock->show();
-                        }                            
-                        else
-                        {
-                            pDock->hide();       
-                        }                            
-                    }                    
-            }
+            //  for(int i=0; i< pDockWidgets.count(); i++)
+            //  {
+            //         QDockWidget * pDock = pDockWidgets.at(i);
+            //         QString title = pDock->windowTitle();
+            //         if(title == action->data().toString())
+            //         {
+            //             if(action->isChecked())
+            //             {
+            //                 pDock->show();
+            //             }                            
+            //             else
+            //             {
+            //                 pDock->hide();       
+            //             }
+            //             //found it ...
+            //             break;                            
+            //         }                    
+            // }
 
             // if(action->isChecked() == false)
             // {
@@ -231,15 +233,22 @@
             // }
             // else if(action->isChecked() == true)
             // {
-            //     for(int i=0; i< pDockWidgets.count(); i++)
-            //     {
-            //         QDockWidget * pDock = pDockWidgets.at(i);
-            //         QString title = pDock->windowTitle();
-            //         if(title == action->data().toString())
-            //         {
-            //             pDock->show();                        
-            //         }                    
-            //     }
+                for(int i=0; i< pDockWidgets.count(); i++)
+                {
+                    QDockWidget * pDock = pDockWidgets.at(i);
+                    QString title = pDock->windowTitle();
+                    
+                    if(title == action->data().toString() && action->isChecked())
+                    {
+                        pDock->show();       
+                        
+                        break;                 
+                    }else if(title == action->data().toString() && !action->isChecked())
+                    {
+                        pDock->hide();
+                        break;
+                    }                    
+                }
             // }
             
         }        

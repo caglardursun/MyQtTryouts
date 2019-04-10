@@ -30,14 +30,7 @@
                 void createViewMenu();
                 void createLanguageMenu();            
                 void createDock();        
-            private:
-                // QDockWidget* m_dock;    
-                // QDockWidget* m_dock2;
-                //QDockWidget* m_mainDock;
-
-                // QListWidget* m_listWidget;
-                // QListWidget* m_listWidget2;                        
-
+                            
             protected:            
                 void changeEvent(QEvent*);
                 QTabWidget *tabWidget;
