@@ -1,14 +1,18 @@
     #include "mainviewer.h"
-
+    #include "utils.h"
 
     MainViewer::MainViewer(QWidget *parent, QString& filePath) :
         QWidget(parent),
-        m_filePath(filePath)    
+        m_filePath(filePath),        
+        m_Zoom(0),
+        m_x(0),
+        m_y(0),
+        m_backgroundColor(255,255,255)    
     {
         // ui->setupUi(this);        
         //Load();
         m_CachedImage.load(m_filePath);
-
+        m_RenderFocusZone = QRect(0,0,width(),height());
         if(m_CachedImage.width() > m_CachedImage.height())
             m_aspectRatio = m_CachedImage.width() / m_CachedImage.height();
         if(m_CachedImage.height() > m_CachedImage.width())
@@ -20,13 +24,29 @@
         // delete ui;
     }
 
+    QSize MainViewer::minimumSizeHint() const
+    {
+            return QSize(100,100);
+    }
+
+    QSize MainViewer::sizeHint() const
+    {
+            return QSize(400,100);
+    }
+
     void MainViewer::paintEvent(QPaintEvent *event)
     {
         Q_UNUSED(event);
-
+        
 
         QPainter painter(this);
-        const QRect r(0, 0, width(), height());
+        //Utils::Msg(QString("%1 %2").arg(width()).arg(height()));
+        const QRect r(0, 0,width(), height());
+        
+        // painter.setBrush(m_backgroundColor);
+        // painter.setRenderHint(QPainter::Antialiasing, true);        
+        // painter.drawRect(this->rect());
+        
 
         m_AbsctractSize = m_RenderFocusZone.size();
 

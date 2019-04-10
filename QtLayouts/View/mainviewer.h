@@ -21,7 +21,8 @@
     public:
         explicit MainViewer(QWidget *parent,QString& filePath);
         ~MainViewer();
-        
+        QSize minimumSizeHint() const Q_DECL_OVERRIDE;
+        QSize sizeHint() const Q_DECL_OVERRIDE;
 
     private:
             
@@ -43,7 +44,7 @@
         QRect m_RenderFocusZone;
         QSize m_AbsctractSize;
         QPoint m_OldPos;
-
+        QColor m_backgroundColor;
         int m_x, m_y;
         float m_aspectRatio;
         float m_Zoom;
