@@ -27,6 +27,7 @@
             private:
                 Ui::MainWindow *ui;
                 void Init();
+                void createViewMenu();
                 void createLanguageMenu();            
                 void createDock();        
             private:
@@ -42,7 +43,8 @@
                 QTabWidget *tabWidget;
 
             protected slots:            
-                void slotLanguageChanged(QAction* action);            
+                void slotLanguageChanged(QAction* action);   
+                void slotViewChanged(QAction* action);         
             private slots:            
                 void on_actionClose_triggered();            
                 void on_action_New_triggered();

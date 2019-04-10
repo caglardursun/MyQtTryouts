@@ -46,7 +46,8 @@
         //Load language from settings        
         
         createDock();            
-        createLanguageMenu();  
+        createLanguageMenu();
+        createViewMenu();  
         // m_mainTabList = new QList<MainTab*>();
         //setCentralWidget();
     }
@@ -162,6 +163,87 @@
         }
     }
 
+    void MainWindow::createViewMenu()
+    {
+
+        QActionGroup* viewGroup = new QActionGroup(ui->menuView);
+        viewGroup->setExclusive(false);
+        connect(viewGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotViewChanged(QAction *)));
+
+        QList<QDockWidget *> pDockWidgets = findChildren<QDockWidget*>();
+        
+        for(int i=0; i< pDockWidgets.count(); i++)
+        {
+           QDockWidget * pDock = pDockWidgets.at(i);
+           QString title = pDock->windowTitle();
+
+           QAction *action = new QAction(title, this);
+           action->setCheckable(true);
+           action->setChecked(true);
+           action->setData(title);
+
+           ui->menuView->addAction(action);
+           viewGroup->addAction(action);
+        }
+
+    }
+
+    void MainWindow::slotViewChanged(QAction* action)
+    {
+        if(nullptr != action)
+        {
+            // load the view dependent on the action content
+            QList<QDockWidget *> pDockWidgets = findChildren<QDockWidget*>();
+
+             for(int i=0; i< pDockWidgets.count(); i++)
+             {
+                    QDockWidget * pDock = pDockWidgets.at(i);
+                    QString title = pDock->windowTitle();
+                    if(title == action->data().toString())
+                    {
+                        if(action->isChecked())
+                        {
+                            pDock->show();
+                        }                            
+                        else
+                        {
+                            pDock->hide();       
+                        }                            
+                    }                    
+            }
+
+            // if(action->isChecked() == false)
+            // {
+            //     //dock u hide et
+            //     //find by name gibi bir şey olsa iş kolaydı varsa da bilmiyorsun 
+            //     //o yüzden dock larda yine döneceksin
+            //     //QMessageBox::information(this,"asd",action->data().toString());
+
+            //     for(int i=0; i< pDockWidgets.count(); i++)
+            //     {
+            //         QDockWidget * pDock = pDockWidgets.at(i);
+            //         QString title = pDock->windowTitle();
+            //         if(title == action->data().toString())
+            //         {
+            //             pDock->hide();
+            //         }                    
+            //     }
+            // }
+            // else if(action->isChecked() == true)
+            // {
+            //     for(int i=0; i< pDockWidgets.count(); i++)
+            //     {
+            //         QDockWidget * pDock = pDockWidgets.at(i);
+            //         QString title = pDock->windowTitle();
+            //         if(title == action->data().toString())
+            //         {
+            //             pDock->show();                        
+            //         }                    
+            //     }
+            // }
+            
+        }        
+    }
 
     void MainWindow::slotLanguageChanged(QAction* action)
     {
@@ -169,7 +251,7 @@
         {
             // load the language dependant on the action content
             loadLanguage(action->data().toString());
-            setWindowIcon(action->icon());
+            // setWindowIcon(action->icon());
         }        
     }
 
