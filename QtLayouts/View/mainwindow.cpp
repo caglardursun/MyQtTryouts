@@ -291,3 +291,4 @@
             tabWidget->setCurrentIndex(tabWidget->count()-1);
         }    
     }
+

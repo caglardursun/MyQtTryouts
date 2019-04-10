@@ -18,4 +18,9 @@ namespace Miracle {
         DestructorMsg(value->metaObject()->className());
     }
 
+    void Utils::Msg(QString value)
+    {
+        qDebug() << DEFAULT_MSG.arg(value);
+    }
+
 }

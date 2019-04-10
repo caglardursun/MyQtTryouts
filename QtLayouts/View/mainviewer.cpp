@@ -12,12 +12,23 @@
         // ui->setupUi(this);        
         //Load();
         m_CachedImage.load(m_filePath);
+
         m_RenderFocusZone = QRect(0,0,width(),height());
+
         if(m_CachedImage.width() > m_CachedImage.height())
             m_aspectRatio = m_CachedImage.width() / m_CachedImage.height();
         if(m_CachedImage.height() > m_CachedImage.width())
             m_aspectRatio = m_CachedImage.height() / m_CachedImage.width();
+
+        // setAutoFillBackground(true);
+        // setBackgroundRole(QPalette::Base);
+        // QPalette pal = palette();
+        // pal.setBrush(QPalette::Base, QPixmap(":/images/background.png"));
+        // pal.setColor(QPalette::HighlightedText, Qt::red);
+        // setPalette(pal);
     }
+
+    
 
     MainViewer::~MainViewer()
     {
@@ -46,7 +57,8 @@
         // painter.setBrush(m_backgroundColor);
         // painter.setRenderHint(QPainter::Antialiasing, true);        
         // painter.drawRect(this->rect());
-        
+        if(m_RenderFocusZone.width() == 0 || m_RenderFocusZone.height() == 0)
+            m_RenderFocusZone = this->rect();
 
         m_AbsctractSize = m_RenderFocusZone.size();
 
@@ -56,6 +68,8 @@
                 m_RenderFocusZone.y() * m_Zoom,
                 m_AbsctractSize.width(),
                 m_AbsctractSize.height());
+
+
 
         QImage p = m_CachedImage.copy(ar);
 

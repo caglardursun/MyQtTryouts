@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>images/background.png</file>
         <file>images/en_US.png</file>
         <file>images/tr_TR.png</file>
         <file>images/favicon.ico</file>

@@ -14,109 +14,109 @@
     <name>MainWindow</name>
     <message>
         <location filename="../View/mainwindow.ui" line="17"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="255"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="254"/>
         <source>MainWindow</source>
         <translation>Main Window</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="38"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="268"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="267"/>
         <source>&amp;File</source>
         <translation>&amp;File</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="46"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="269"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="268"/>
         <source>&amp;Language</source>
         <translation>&amp;Language</translation>
     </message>
     <message>
         <location filename="../View/mainwindow.ui" line="51"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="270"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="269"/>
         <source>View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="74"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="271"/>
+        <location filename="../View/mainwindow.ui" line="73"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="270"/>
         <source>History</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="107"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="272"/>
+        <location filename="../View/mainwindow.ui" line="106"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="271"/>
         <source>History Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="130"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="274"/>
+        <location filename="../View/mainwindow.ui" line="129"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="273"/>
         <source>If you have a large memory, keep close to maximum. Otherwise keep close to minimum.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="159"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="276"/>
+        <location filename="../View/mainwindow.ui" line="158"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="275"/>
         <source>Apply</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="183"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="277"/>
+        <location filename="../View/mainwindow.ui" line="182"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="276"/>
         <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="226"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="278"/>
+        <location filename="../View/mainwindow.ui" line="225"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="277"/>
         <source>Color Catalog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="265"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="256"/>
+        <location filename="../View/mainwindow.ui" line="264"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="255"/>
         <source>&amp;New</source>
         <translation>&amp;New</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="275"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="257"/>
+        <location filename="../View/mainwindow.ui" line="274"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="256"/>
         <source>Exit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="285"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="258"/>
+        <location filename="../View/mainwindow.ui" line="284"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="257"/>
         <source>&amp;Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="295"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="259"/>
+        <location filename="../View/mainwindow.ui" line="294"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="258"/>
         <source>Undo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="298"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="261"/>
+        <location filename="../View/mainwindow.ui" line="297"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="260"/>
         <source>Ctrl+Z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="308"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="263"/>
+        <location filename="../View/mainwindow.ui" line="307"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="262"/>
         <source>Redo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="311"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="265"/>
+        <location filename="../View/mainwindow.ui" line="310"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="264"/>
         <source>Ctrl+Shift+Z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.ui" line="319"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="267"/>
+        <location filename="../View/mainwindow.ui" line="318"/>
+        <location filename="../build/MiracleLayout_autogen/include/ui_mainwindow.h" line="266"/>
         <source>History Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -129,7 +129,7 @@
         <translation type="vanished">English</translation>
     </message>
     <message>
-        <location filename="../View/mainwindow.cpp" line="185"/>
+        <location filename="../View/mainwindow.cpp" line="276"/>
         <source>Images (*.png *.tif *.jpg)</source>
         <translation type="unfinished"></translation>
     </message>

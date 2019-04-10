@@ -41,6 +41,6 @@
             private slots:            
                 void on_actionClose_triggered();            
                 void on_action_New_triggered();
-                void slotCloseTab(int index);
+                void slotCloseTab(int index);                
     };
 
