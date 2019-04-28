@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.cs": "csharp",
+        "qobject": "cpp",
+        "qscrollbar": "cpp",
+        "qsize": "cpp"
+    }
+}
