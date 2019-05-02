@@ -1,4 +1,4 @@
-### ColorList Box denemeleri ...
+### ColorListBox tryouts ...
 
-    [x] Drawing vb.
-    [ ] Widget için drawTilexPixmap method u var(mış). Örnek bul, incele.
+    [x] Drawing colorbox list etc.
+    
