@@ -1,0 +1,29 @@
+{
+    // Olası öznitelikler hakkında bilgi edinmek için IntelliSense kullanın.
+    // Mevcut özniteliklerin açıklamalarını görmek için fare ile üzerine gelin.
+    // Daha fazla bilgi için ziyaret edin: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug (LLDB)",
+            "type": "lldb-mi",
+            "request": "launch",
+            "target": "${workspaceFolder}/build/MiracleLayout",
+            "cwd": "${workspaceFolder}/build",
+            "lldbmipath": "/usr/bin/lldb-mi-7"            
+            
+        },        
+        {
+            "name": "Build & Run (Win)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/build",
+            "environment": [],
+            "externalConsole": false,
+            "visualizerFile": "${workspaceFolder}/.vscode/qt5.natvis"
+        }
+    ]
+}

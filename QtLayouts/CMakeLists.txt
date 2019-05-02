@@ -20,8 +20,15 @@ find_package(Qt5 REQUIRED Core Widgets Gui LinguistTools)
 
 
 
-file(GLOB project_sources "*.cpp" "View/*.cpp" "Model/*.cpp"  "ViewModel/*.cpp")
-file(GLOB project_headers "*.h" "View/*.h" "Model/*.h"  "ViewModel/*.h")
+file(GLOB project_sources "*.cpp" 
+                            "View/*.cpp" 
+                            "Model/*.cpp"  
+                            "ViewModel/*.cpp")
+file(GLOB project_headers "*.h" 
+                            "View/*.h" 
+                            "Model/*.h" 
+                            "ViewModel/*.h")
+
 file(GLOB project_dialogs "View/*.ui")
 
 set(resource_files "resource.qrc")
@@ -60,8 +67,11 @@ set(translation_files "languages/tr_TR.ts" "languages/en_US.ts")
 #set(qm_files "languages/türkçe.qm" "languages/english.qm")
 
 #languages kasörü oluştur
-#file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/languages")
-#qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files} "${CMAKE_BINARY_DIR}/languages" )
+# file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/languages")
+# qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files} PROPERTIES OUTPUT_LOCATION "${CMAKE_BINARY_DIR}/languages" )
+#configure_file(${resource_files} ${CMAKE_BINARY_DIR} COPYONLY)
+
+#if the pwd is not set copy might be usefull
 qt5_create_translation(qm_files ${CMAKE_SOURCE_DIR} ${translation_files})
 
 

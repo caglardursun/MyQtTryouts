@@ -12,7 +12,6 @@
     <name>MainViewer</name>
     <message>
         <location filename="../View/mainviewer.ui" line="14"/>
-        <location filename="../build/MiracleLayout_autogen/include/ui_mainviewer.h" line="53"/>
         <source>Form</source>
         <translation type="unfinished">Forum</translation>
     </message>

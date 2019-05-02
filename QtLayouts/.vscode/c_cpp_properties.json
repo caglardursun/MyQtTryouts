@@ -4,6 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
+                "/usr/include",
                 "${workspaceFolder}/build",
                 "${workspaceFolder}/build/MiracleLayout_autogen/include",
                 "/opt/Qt/5.12.1/gcc_64/include",
@@ -11,13 +12,12 @@
                 "/opt/Qt/5.12.1/gcc_64/./mkspecs/linux-g++",
                 "/opt/Qt/5.12.1/gcc_64/include/QtWidgets",
                 "/opt/Qt/5.12.1/gcc_64/include/QtGui"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/bin/clang",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "clang-x64",
-            "configurationProvider": "vector-of-bool.cmake-tools"
+            ],            
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         },
         {
             "name": "Win",

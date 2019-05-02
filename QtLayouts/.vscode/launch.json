@@ -1,39 +1,18 @@
 {
-    // Olası öznitelikler hakkında bilgi edinmek için IntelliSense kullanın.
-    // Mevcut özniteliklerin açıklamalarını görmek için fare ile üzerine gelin.
-    // Daha fazla bilgi için ziyaret edin: https://go.microsoft.com/fwlink/?linkid=830387
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(gdb) (Linux)",
-            "type": "cppdbg",
+            "name": "Debug",
+            "type": "lldb-mi",
             "request": "launch",
-            "program": "${command:cmake.launchTargetPath}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",            
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-exec -enable-pretty-printing",
-                    "ignoreFailures": true
-                }
-            ]
-        },
-        {
-            "name": "Build & Run (Win)",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "program": "${command:cmake.launchTargetPath}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/build",
-            "environment": [],
-            "externalConsole": false,
-            "visualizerFile": "${workspaceFolder}/.vscode/qt5.natvis"
+            "lldbmipath": "/usr/bin/lldb-mi-7",
+            
+            "target": "${workspaceFolder}/build/MiracleLayout",
+            "cwd": "${workspaceRoot}",
+            "valuesFormatting": "parseText"
         }
     ]
 }

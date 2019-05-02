@@ -1,7 +1,5 @@
     #pragma once
     #include <QWidget>
-
-    #include <QWidget>
     #include <QImage>
     #include <QPainter>
     #include <QDebug>
