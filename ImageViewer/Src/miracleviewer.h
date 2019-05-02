@@ -12,9 +12,7 @@
 class MiracleViewer : public QWidget
 {
     Q_OBJECT
-    private:
-        /* data */
-        QImage* m_pImage;
+    private:                
         QImageReader* m_pImageReader;
         //Zoom etc.
         double scaleFactor;

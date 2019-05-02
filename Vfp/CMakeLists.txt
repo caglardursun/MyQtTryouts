@@ -27,12 +27,6 @@ include_directories("View")
 include_directories("Model")
 include_directories("ViewMng")
 
-file(GLOB source "*.cpp")
-file(GLOB header "*.cpp")
-
-message(${source})
-message(${header})
-
 
 #source files ...
 set(project_sources 

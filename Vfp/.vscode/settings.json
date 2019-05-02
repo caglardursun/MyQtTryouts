@@ -1,8 +1,10 @@
 {
     "files.associations": {
+        "*.cs": "csharp",
         "qapplication": "cpp",
         "utility": "cpp",
         "xstddef": "cpp",
-        "type_traits": "cpp"
+        "type_traits": "cpp",
+        "qtcpsocket": "cpp"
     }    
 }

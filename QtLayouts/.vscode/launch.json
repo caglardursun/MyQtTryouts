@@ -32,7 +32,7 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/build",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": false,            
             "visualizerFile": "${workspaceFolder}/.vscode/qt5.natvis"
         }
     ]

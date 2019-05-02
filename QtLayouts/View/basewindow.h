@@ -8,7 +8,7 @@
 
     using namespace Miracle;
 
-    class BaseWindow 
+    class BaseWindow
     {
         
 
