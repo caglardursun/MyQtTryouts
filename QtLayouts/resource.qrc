@@ -4,12 +4,12 @@
         <file>images/en_US.png</file>
         <file>images/tr_TR.png</file>
         <file>images/favicon.ico</file>
-        <file>images/undo.png</file>
-        <file>images/redo.png</file>
+        <file>images/undo_96px.png</file>
+        <file>images/redo_96px.png</file>
         <file>images/reset.png</file>        
         <file>images/new.png</file>
         <file>images/open.png</file>
-        <file>images/save.png</file>
+        <file>images/save_96px.png</file>
     </qresource>
     <qresource prefix="/json">
         <file>settings.json</file>

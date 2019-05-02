@@ -30,6 +30,7 @@ namespace Miracle
         QString getAppShortName() const { return m_appShortName; }        
         QString getCurrentLanguage() const {return m_currentLanguage; }
         QString getCurrentStyle() const {return m_currentStyle; }
+        
 
     signals:
         void NotifyStatusMessage(QString message);

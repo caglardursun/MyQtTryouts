@@ -189,7 +189,7 @@
     <message>
         <location filename="../View/mainwindow.cpp" line="276"/>
         <source>Images (*.png *.tif *.jpg)</source>
-        <translation type="unfinished">İmaj (*.png *.tif *.jpg)</translation>
+        <translation>İmaj Dosyaları (*.png *.tif *.jpg)</translation>
     </message>
     <message>
         <source>Current Language changed to %1</source>
@@ -273,7 +273,7 @@
         <location filename="../Model/settings.cpp" line="170"/>
         <source>Error parsing JSON settings file.
 </source>
-        <translation>AYar JSON dosyası syntax hatası</translation>
+        <translation>Ayar JSON dosyası syntax hatası</translation>
     </message>
     <message>
         <location filename="../Model/settings.cpp" line="172"/>

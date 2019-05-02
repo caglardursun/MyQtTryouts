@@ -276,9 +276,9 @@
   </action>
   <action name="actionSave">
    <property name="icon">
-    <iconset resource="../resource.qrc">
+    <iconset>
      <normaloff>:/images/save.png</normaloff>
-     <normalon>:/images/new.png</normalon>:/images/save.png</iconset>
+     <normalon>:/images/save_96px.png</normalon>:/images/save.png</iconset>
    </property>
    <property name="text">
     <string>&amp;Save</string>
@@ -287,7 +287,7 @@
   <action name="actionUndo">
    <property name="icon">
     <iconset>
-     <normalon>:/images/undo.png</normalon>
+     <normalon>:/images/undo_96px.png</normalon>
     </iconset>
    </property>
    <property name="text">
@@ -300,7 +300,7 @@
   <action name="actionRedo">
    <property name="icon">
     <iconset>
-     <normalon>:/images/redo.png</normalon>
+     <normalon>:/images/redo_96px.png</normalon>
     </iconset>
    </property>
    <property name="text">
