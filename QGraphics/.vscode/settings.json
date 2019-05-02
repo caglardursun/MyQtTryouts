@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "qgraphicspixmapitem": "cpp",
+        "qgraphicsview": "cpp"
+    }
+}
