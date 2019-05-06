@@ -1,5 +1,5 @@
 # MyQtTryouts
-* Echo Server : Simple TCP/IP socker programing tryouts on Qt 
+* Echo Server : Simple TCP/IP socket programing tryouts on Qt 
 * QtConsole : Simple console application tryouts on Qt 
 * QtQuick : Qml application theme testing 
 * QtCustomControl : Custom control development testing
