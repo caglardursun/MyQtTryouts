@@ -16,7 +16,7 @@
 # Requirements ...
 
 * You should have latest version of cmake 
-* VsCode will be a plus but cmake already handle the build envoirement generation
+* VsCode will be a plus but cmake already handle the build environment generation
 * If you want to use debug helper make sure qt5.natvis file should be defined in `launch.json` file like ..
 
 ```json
