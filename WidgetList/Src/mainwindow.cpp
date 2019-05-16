@@ -1,8 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QListWidgetItem>
-#include <QRandomGenerator>
 #include "thewidgetitem.h"
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -54,9 +54,9 @@ void MainWindow::GenerateColors()
     //Random generate the colors
     for(int i=0;i <155;i++)
     {
-        int r = QRandomGenerator::global()->bounded(255);
-        int g = QRandomGenerator::global()->bounded(255);
-        int b = QRandomGenerator::global()->bounded(255);
+        int r = 64 * i % 255;
+        int g = 128 + i %255 ;
+        int b = 0 + i % 255;
 
         m_colorList->append(QColor::fromRgb(r,g,b));
     }
