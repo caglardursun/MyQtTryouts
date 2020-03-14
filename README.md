@@ -7,7 +7,7 @@
     - [x] `Custom widget implimentation`
 
 * #### Vfp : Qt widget application which I try to figure out 
-    - [ ] `How to impliment MVVM approach in c++ and Qt`
+    - [ ] `How to implement an MVVM design in c++ and Qt`
     - [x] `How to json file parsing works in Qt libraries`
     - [x] `How to resource management works in Qt Application`
     - [x] `Theme and styling etc. testing`
